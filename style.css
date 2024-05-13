@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Pag_inicio{
+    height: 100vh;
+    background-color: #253D24;
+
+}
+.title h1{
+    color: #fff;
+    text-align: center;  
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 50;  
+}
+.Pag_inicio .container{
+    display: flex;
+    flex-direction: column;
+}
+.Pag_inicio .container .left{
+    width: 45%;
+    margin-top: 50px;
+}
+.Pag_inicio .container .left .logo img{
+    width: 500px;
+    margin-left: 50px;
+}
+.Pag_inicio .container .rigth .botones{
+    /* background-color: red; */
+    width: 45%;
+    display:  flex;
+    justify-content: space-between;
+    float: right;
+}
+.Pag_inicio .container .rigth .botones button{
+    background-color: #54DC3F;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 200px;
+    border: 2px solid white;
+}
+.Pag_inicio .container .rigth .botones button a{
+    text-decoration: none;
+    color: black;
+}
+
+/*LOGEO*/
+
+.logeo{
+    background-color: #54DC3F;
+}
+.logeo .nav_top .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logeo .nav_top .container .logo img{
+    width: 80px;
+    margin-left: 5em;
+}
+.logeo .nav_top .container .title{
+    align-items: center;
+    /* background-color: red; */
+}
+.logeo .nav_top .container .title h1{
+    color: black;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+}
+.logeo .nav_top .container .boton_salir{
+    padding: 15px 40px;
+}
+.logeo .nav_top .container .boton_salir button{
+    padding: 5px 10px;
+    font-family: "Poppins", sans-serif; 
+    font-size: 15px;
+    background-color: #1C5D17;
+    color: #fff;
+}
+/* F5F5F5 */
