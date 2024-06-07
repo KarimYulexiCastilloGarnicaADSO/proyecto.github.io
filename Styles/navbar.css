@@ -1,0 +1,32 @@
+.logeo{
+    background-color: var(--claro);
+}
+.logeo .nav_top .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logeo .nav_top .container .logo img{
+    width: 80px;
+    margin-left: 5em;
+}
+.logeo .nav_top .container .title{
+    align-items: center;
+    /* background-color: red; */
+}
+.logeo .nav_top .container .title h1{
+    color: var(--negro);
+    font-family: var(--letras); 
+    font-weight: 500;
+}
+.logeo .nav_top .container .boton_salir{
+    padding: 15px 40px;
+}
+.logeo .nav_top .container .boton_salir button a{
+    padding: 5px 10px;
+    font-family: var(--letras); 
+    font-size: 15px;
+    background-color: var(--oscuro2);
+    color: var(--white);
+    text-decoration: none;
+}

@@ -1,0 +1,44 @@
+.botones_top {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.botones_top .boton_vehiculo_2 button{
+    background-color: var(--gris_cambio);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 450;
+    font-size: 18px;
+    border: 2px solid var(--negro);
+    border-radius: 5px;
+}
+.botones_top .boton_registro_vehiculo_2 button{
+    background-color: var(--clarito);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 450;
+    font-size: 18px;
+    border: 2px solid var(--negro);
+    border-radius: 5px;
+}
+.botones_top .boton_rgistro_usuarios button{
+    background-color: var(--gris_cambio);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 450;
+    font-size: 18px;
+    border: 2px solid var(--negro);
+    border-radius: 5px;
+}
+.boton_ingresar_nuevo button{
+    background-color: var(--clarote);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 400;
+    font-size: 18px;
+    border: 2.5px solid transparent;
+    border-radius: 5px;
+    margin-left: 120px;
+    margin-top: 60px;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Styles/style.css">
 </head>
 <body>
     <header>
@@ -12,13 +12,13 @@
             <nav class="nav_top">
                 <div class="container">
                     <div class="logo">
-                        <img src="/proyecto/Imagenes/logo_Sena_negro.png" alt="">
+                        <img src="/Imagenes/logo_Sena_negro.png" alt="">
                     </div>
                     <div class="title">
                         <h1>Registro de parqueadero de Instructores y Aprendices</h1>
                     </div>      
                     <div class="boton_salir">
-                        <button><a href="/proyecto/vehiculos.html">Volver</a></button>
+                        <button><a href="vehiculos.html">Volver</a></button>
                     </div>
                 </div>
             </nav>
@@ -31,28 +31,29 @@
                 <form class="formulario_left">
                     <label>Ingrese la placa del vehiculo a ingresar</label>
                     <input type="text">
-                    <hr>
                     <label>Ingrese la marca del vehiculo a ingresar</label>
                     <input type="text">
-                    <hr>
                     <label>Ingrese el tipo vehiculo a ingresar</label>
                     <input type="text">
-                    <hr>
+                    <select name="select" class="combo_carros">
+                        <option value="value1">Seleccione</option>
+                        <option value="value2">Carro</option>
+                        <option value="value2">Moto</option>
+                        <option value="value2">BIcicleta</option>
+                    </select>
                 </form>
             </div>
             <div class="rigth">
                 <form class="formulario_rigth">
                     <label for="">Ingrese el modelo del vehiculo a ingresar</label>
-                    <input type="number">
-                    <hr>
+                    <input type="text">
                     <label for="">Ingrese el color del vehiculo a ingresar</label>
                     <input type="text">
-                    <hr>
                 </form>
             </div>
         </div>
         <div class="boton_guardar">
-            <button class="guardar">Guardar</button>
+            <button class="guardar"><a href="vehiculos.html">Guardar</a></button>
         </div>
     </section>
 </body>

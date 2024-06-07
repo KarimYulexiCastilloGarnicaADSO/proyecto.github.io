@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(/Styles/navbar.css);
+@import url(/Styles/vehiculos.css);
+@import url(/Styles/registro.css);
 *{
     margin: 0;
     padding: 0;
@@ -23,6 +26,9 @@
     --oscuro4: #1B4F18;
     --clarito2: #35C121;
 }
+button{
+    border: none;
+}
 .Pag_inicio {
     height: 100vh;
     background-color: var(--oscuro);
@@ -41,9 +47,18 @@
     flex-direction: row;
     align-items: center;
 }
-.Pag_inicio .container .logo img {
-    width: 350px;
-    margin-right: 200px;
+.Pag_inicio{
+
+}
+.container  {
+    width: 40vw;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-right: 200px; */
+}
+.logo img{
+    width: auto;
 }
 .Pag_inicio .container .botones {
     display: flex;
@@ -62,41 +77,7 @@
     color: var(--negro);
 }
 
-
 /*LOGEO*/
-
-.logeo{
-    background-color: var(--claro);
-}
-.logeo .nav_top .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logeo .nav_top .container .logo img{
-    width: 80px;
-    margin-left: 5em;
-}
-.logeo .nav_top .container .title{
-    align-items: center;
-    /* background-color: red; */
-}
-.logeo .nav_top .container .title h1{
-    color: var(--negro);
-    font-family: var(--letras); 
-    font-weight: 500;
-}
-.logeo .nav_top .container .boton_salir{
-    padding: 15px 40px;
-}
-.logeo .nav_top .container .boton_salir button a{
-    padding: 5px 10px;
-    font-family: var(--letras); 
-    font-size: 15px;
-    background-color: var(--oscuro2);
-    color: var(--white);
-    text-decoration: none;
-}
 hr{
     width: 300px;
     margin-top: 5px;
@@ -108,7 +89,6 @@ hr{
     background-color: var(--gris);
     margin: auto;
     margin-top: 120px;
-    /* box-shadow: 7px 13px 37px #000;   */
     padding: 50px 50px;
     font-family: var(--letras); 
 }
@@ -116,7 +96,6 @@ hr{
     margin-bottom: 10px;
 }
 .form_login .subtitulos .subs input{
-    /* background-color: red; */
     height: 30px;
     width: 300px;
 }
@@ -139,54 +118,9 @@ a{
     text-decoration: none;
     color: var(--negro);
 }
-.botones_top {
-    margin-top: 55px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.botones_top .boton_vehiculo button{
-    background-color: var(--clarito);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 450;
-    font-size: 18px;
-    border: 2px solid var(--negro);
-    border-radius: 5px;
-}
-.botones_top .boton_registro_vehiculo button{
-    background-color: var(--gris_cambio);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 450;
-    font-size: 18px;
-    border: 2px solid var(--negro);
-    border-radius: 5px;
-}
-.botones_top .boton_rgistro_usuarios button{
-    background-color: var(--gris_cambio);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 450;
-    font-size: 18px;
-    border: 2px solid var(--negro);
-    border-radius: 5px;
-}
-.boton_ingresar_nuevo button{
-    background-color: var(--clarote);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 400;
-    font-size: 18px;
-    border: 2.5px solid transparent;
-    border-radius: 5px;
-    margin-left: 120px;
-    margin-top: 60px;
-}
 .boton_ingresar_nuevo button a{
     color: var(--white);
     text-decoration: none;
-
 }
 i{
     color: var(--negro);
@@ -209,7 +143,6 @@ i{
     font-family: var(--letra_tablas);
     font-weight: 450;
     color: var(--negro);
-    /* background-color: var(--oscuro3); */
 }
 .boton_cargar .cargar_datos{
     background-color: var(--white);
@@ -244,28 +177,39 @@ i{
 .ingreso .formulario_veh .formulario_left label{
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 .ingreso .formulario_veh .formulario_left input{
     width: 250px;
-    height: 25px;
+    height: 30px;
     margin-left: 20px;
+    margin-bottom: 60px;
 }
 .ingreso .formulario_veh .left .formulario_left{
     margin-top: 15px;
     font-family: var(--letras);
     margin-right: 50px;
 }
+.ingreso .formulario_veh .left .formulario_left .combo_carros{
+    width: 150px;
+    height: 40px;
+    font-family: var(--letra_tablas);
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 20px
+}
 .ingreso .formulario_veh .formulario_rigth label{
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 .ingreso .formulario_veh .formulario_rigth input{
     width: 250px;
-    height: 25px;
+    height: 30px;
     margin-left: 20px;
+    margin-bottom: 60px;
 }
 .ingreso .formulario_veh .rigth .formulario_rigth{
-    /* background-color: blue; */
     margin-top: 15px;
     font-family: var(--letras);
     margin-right: 50px;
@@ -273,7 +217,7 @@ i{
 hr{
     margin-bottom: 30px;
 }
-.boton_guardar button {
+.boton_guardar button{
     background-color: var(--gris);
     padding: 3px 20px;
     font-family: var(--letras); 
@@ -281,7 +225,93 @@ hr{
     font-size: 18px;
     border: 2.5px solid var(--gris_cambio);
     border-radius: 5px;
-    margin-left: 600px;
+    margin-left: 900px;
     margin-top: 60px;
-    color: var(--clarito2);
+}
+
+@media (max-width: 760px) {
+    /* … */
+    body{
+        background-color: red;   
+    }
+    .container {
+        width: 100%;
+    }   
+    .logo{
+
+        width: auto;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .botones{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .Pag_inicio .container .botones {
+        gap: 50px;
+    }
+    .Pag_inicio .container .botones button {
+        padding: 10px 30px;
+    }
+    .botones_top {
+        justify-content: space-evenly;
+    }
+    .botones_top .boton_vehiculo{
+        margin-left: 40px;
+    }
+    .tabla_datos_vehiculo table{
+        width: 80%;
+    }
+    .boton_ingresar_nuevo button {
+        margin-left: 100px;
+    }
+    .boton_cargar .cargar_datos{
+        margin-left: 100px;
+    }
+    .boton_guardar button{
+        margin-left: 420px;
+    }
+}
+
+@media (max-width: 500px) {
+    body{
+        background-color: blue;
+    }
+    .Pag_inicio{
+        height: 850px;
+        width: 100%;
+    }
+    .logo{
+        width: 100%;
+    }
+    .title h1 {
+        font-size: 30px; 
+        text-align: center;
+    }
+    .Pag_inicio .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .Pag_inicio .container .logo img {
+        width: 150px;
+        margin-left: 200px;
+        margin-bottom: 150px;
+    }
+    .Pag_inicio .container .botones {
+        gap: 40px;
+    }
+    .Pag_inicio .container .botones button {
+        padding: 5px 10px;
+    }
+}
+
+/* REGISTRO ENTRADA */
+a{
+    text-decoration: none;
+    color: var(--negro);
+    font-family: var(--letras);
+    font-weight: 450;
+    padding: 2px;
 }
