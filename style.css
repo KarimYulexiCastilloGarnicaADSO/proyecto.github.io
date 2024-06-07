@@ -20,6 +20,8 @@
     --oscuro3: #052702;
     --clarote: #1D7615;
     --letra_tablas: "Montserrat", sans-serif;
+    --oscuro4: #1B4F18;
+    --clarito2: #35C121;
 }
 .Pag_inicio {
     height: 100vh;
@@ -208,4 +210,78 @@ i{
     font-weight: 450;
     color: var(--negro);
     /* background-color: var(--oscuro3); */
+}
+.boton_cargar .cargar_datos{
+    background-color: var(--white);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 400;
+    font-size: 18px;
+    border: 2.5px solid var(--gris_cambio);
+    border-radius: 5px;
+    margin-left: 120px;
+    margin-top: 60px;
+}
+.boton_cargar .cargar_datos a{
+    color: var(--clarote);
+}
+
+/* VEHICULOS NUEVOS */
+.ingreso h1{
+    font-family: var(--titulos);
+    text-align: center;
+    margin: 30px;
+    font-weight: 100;
+    font-size: 22px;
+    color: var(--oscuro4);
+}
+.ingreso .formulario_veh{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+.ingreso .formulario_veh .formulario_left label{
+    display: flex;
+    flex-direction: column;
+}
+.ingreso .formulario_veh .formulario_left input{
+    width: 250px;
+    height: 25px;
+    margin-left: 20px;
+}
+.ingreso .formulario_veh .left .formulario_left{
+    margin-top: 15px;
+    font-family: var(--letras);
+    margin-right: 50px;
+}
+.ingreso .formulario_veh .formulario_rigth label{
+    display: flex;
+    flex-direction: column;
+}
+.ingreso .formulario_veh .formulario_rigth input{
+    width: 250px;
+    height: 25px;
+    margin-left: 20px;
+}
+.ingreso .formulario_veh .rigth .formulario_rigth{
+    /* background-color: blue; */
+    margin-top: 15px;
+    font-family: var(--letras);
+    margin-right: 50px;
+}
+hr{
+    margin-bottom: 30px;
+}
+.boton_guardar button {
+    background-color: var(--gris);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 400;
+    font-size: 18px;
+    border: 2.5px solid var(--gris_cambio);
+    border-radius: 5px;
+    margin-left: 600px;
+    margin-top: 60px;
+    color: var(--clarito2);
 }
