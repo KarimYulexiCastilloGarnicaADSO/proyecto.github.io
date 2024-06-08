@@ -47,9 +47,6 @@ button{
     flex-direction: row;
     align-items: center;
 }
-.Pag_inicio{
-
-}
 .container  {
     width: 40vw;
     height: auto;
@@ -225,12 +222,10 @@ hr{
     font-size: 18px;
     border: 2.5px solid var(--gris_cambio);
     border-radius: 5px;
-    margin-left: 900px;
-    margin-top: 60px;
+    margin-left: 600px;
 }
 
 @media (max-width: 760px) {
-    /* … */
     body{
         background-color: red;   
     }
@@ -255,23 +250,28 @@ hr{
     .Pag_inicio .container .botones button {
         padding: 10px 30px;
     }
-    .botones_top {
-        justify-content: space-evenly;
-    }
     .botones_top .boton_vehiculo{
         margin-left: 40px;
     }
     .tabla_datos_vehiculo table{
-        width: 80%;
+        width: 75%;
+        margin-left: 55px;
     }
     .boton_ingresar_nuevo button {
-        margin-left: 100px;
+        margin-left: 55px;
     }
     .boton_cargar .cargar_datos{
-        margin-left: 100px;
+        margin-left: 55px;
     }
     .boton_guardar button{
         margin-left: 420px;
+    }
+    .formulario_left{
+        margin-left: 35px;
+    }
+    .boton_guardar button{
+        margin-left: 320px;
+        margin-bottom: 30px;
     }
 }
 
@@ -280,14 +280,15 @@ hr{
         background-color: blue;
     }
     .Pag_inicio{
-        height: 850px;
+        height: 765px;
         width: 100%;
     }
     .logo{
         width: 100%;
     }
     .title h1 {
-        font-size: 30px; 
+        font-weight: 300;
+        font-size: 23px; 
         text-align: center;
     }
     .Pag_inicio .container {
@@ -295,15 +296,56 @@ hr{
         flex-direction: column;
     }
     .Pag_inicio .container .logo img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 150px;
-        margin-left: 200px;
-        margin-bottom: 150px;
+        margin-left: 170px;
     }
     .Pag_inicio .container .botones {
         gap: 40px;
+        margin-top: 150px;
     }
     .Pag_inicio .container .botones button {
         padding: 5px 10px;
+    }
+    .logeo .nav_top .container .title h1 {
+        font-size: 15px;
+    }
+    .logeo .nav_top .container .boton_salir {
+        padding: 15px;
+    }
+    .botones_top .boton_rgistro_usuarios{
+        margin-right: 9px;
+    }
+    .botones_top button {
+        font-size: 15px;
+        margin-left: 5px;
+        gap: 20px;
+    }
+    .formulario_left{
+        font-size: 15px;
+    }
+    .ingreso .formulario_veh .formulario_left input{
+        width: 130px;
+        height: 20px;
+    }
+    .formulario_rigth{
+        font-size: 15px;
+    }
+    .ingreso .formulario_veh .formulario_rigth input{
+        width: 130px;
+        height: 20px;
+    }
+    .ingreso .formulario_veh .left .formulario_left .combo_carros{
+        width: 150px;
+        height: 40px;
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+    .boton_guardar button{
+        margin-top: 30px;
+        margin-left: 200px;
     }
 }
 
