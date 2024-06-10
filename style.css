@@ -4,6 +4,7 @@
 @import url(Styles/navbar.css);
 @import url(Styles/vehiculos.css);
 @import url(Styles/registro.css);
+@import url(Styles/cargar_datos.css);
 *{
     margin: 0;
     padding: 0;
@@ -141,7 +142,7 @@ i{
     font-weight: 450;
     color: var(--negro);
 }
-.boton_cargar .cargar_datos{
+/* .boton_cargar .cargar_datos{
     background-color: var(--white);
     padding: 3px 20px;
     font-family: var(--letras); 
@@ -154,7 +155,7 @@ i{
 }
 .boton_cargar .cargar_datos a{
     color: var(--clarote);
-}
+} */
 
 /* VEHICULOS NUEVOS */
 .ingreso h1{
@@ -275,6 +276,45 @@ hr{
     }
 }
 
+/* REGISTRO ENTRADA */
+a {
+    text-decoration: none;
+    color: var(--negro);
+    font-family: var(--letras);
+    font-weight: 450;
+    padding: 2px;
+}
+
+.botones_registros {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    padding: 0 20px;
+    margin-left: 20px;
+}
+.botones_registros .input_busqueda{
+    width: 150px;
+    height: 30px;
+    margin-left: 420px;
+}
+.botones_registros button {
+    background-color: var(--clarote);
+    padding: 10px 50px;
+    margin-left: 50px;
+}
+.botones_registros button a {
+    color: var(--white);
+    font-size: 17px;
+}
+.combo .combo_busqueda {
+    width: 150px;
+    height: 40px;
+    font-family: var(--letra_tablas);
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 30px;
+}
+
 @media (max-width: 500px) {
     body{
         background-color: blue;
@@ -347,13 +387,20 @@ hr{
         margin-top: 30px;
         margin-left: 200px;
     }
-}
+    .input_busqueda{
+        background-color: green;
+    }
+    /* .combo{
+        background-color: pink;
 
-/* REGISTRO ENTRADA */
-a{
-    text-decoration: none;
-    color: var(--negro);
-    font-family: var(--letras);
-    font-weight: 450;
-    padding: 2px;
+    } */
+    .combo .combo_busqueda {
+        width: 150px;
+        height: 40px;
+        font-family: var(--letra_tablas);
+        padding: 10px;
+        font-size: 15px;
+        /* margin-left: 30px; */
+        /* background-color: red; */
+    }
 }

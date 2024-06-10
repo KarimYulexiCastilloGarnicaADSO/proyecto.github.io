@@ -1,0 +1,14 @@
+.boton_cargar .cargar_datos{
+    background-color: var(--white);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 400;
+    font-size: 18px;
+    border: 2.5px solid var(--gris_cambio);
+    border-radius: 5px;
+    margin-left: 120px;
+    margin-top: 60px;
+}
+.boton_cargar .cargar_datos a{
+    color: var(--clarote);
+}
