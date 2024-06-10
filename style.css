@@ -315,6 +315,37 @@ a {
     margin-left: 30px;
 }
 
+/* ENTRADA */
+.entrada_ingreso{
+    display: flex;
+    justify-content: space-around;
+    margin: 150px;
+}
+.entrada_ingreso label{
+    font-family: var(--letras);
+    font-size: 20px;
+}
+.entrada_ingreso input{
+    font-family: var(--letras);
+    font-size: 15px;
+}
+
+/* SALIDA */
+.salida_ingreso{
+    display: flex;
+    justify-content: space-around;
+    margin: 150px;
+}
+.salida_ingreso label{
+    font-family: var(--letras);
+    font-size: 15px; 
+}
+.salida_ingreso input{
+    font-family: var(--letras);
+    font-size: 15px;
+}
+
+
 @media (max-width: 500px) {
     body{
         background-color: blue;
