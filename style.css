@@ -5,6 +5,7 @@
 @import url(Styles/vehiculos.css);
 @import url(Styles/registro.css);
 @import url(Styles/cargar_datos.css);
+@import url(Styles/usuarios.css);
 *{
     margin: 0;
     padding: 0;
