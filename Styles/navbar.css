@@ -2,13 +2,13 @@
     background-color: var(--claro);
 }
 
-.logeo .nav_top {
+.logeo .logeo__nav {
     display: flex;
     align-items: center;
     justify-content: center; 
 }
 
-.logeo .nav_top .container {
+.logeo .logeo__nav .logeo__container {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -17,16 +17,16 @@
     box-sizing: border-box;
 }
 
-.logeo .nav_top .container .logo {
+.logeo .logeo__nav .logeo__container .logo__logeo {
     display: flex;
     align-items: center;
 }
 
-.logeo .nav_top .container .logo img {
+.logeo .logeo__nav .logeo__container .logo__logeo img {
     width: 80px;
 }
 
-.logeo .nav_top .container .title {
+.logeo .logeo__nav .logeo__container .title__logeo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -34,17 +34,17 @@
     align-items: center;
 }
 
-.logeo .nav_top .container .title h1 {
+.logeo .logeo__nav .logeo__container .title__logeo h1 {
     color: var(--negro);
     font-family: var(--letras);
     font-weight: 500;
 }
 
-.logeo .nav_top .container .boton_salir {
+.logeo .logeo__nav .logeo__container .boton__logeo {
     padding: 15px 40px;
 }
 
-.logeo .nav_top .container .boton_salir button a {
+.logeo .logeo__nav .logeo__container .boton__logeo button a {
     padding: 5px 10px;
     font-family: var(--letras);
     font-size: 15px;
