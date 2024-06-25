@@ -33,6 +33,9 @@
 button{
     border: none;
 }
+input:focus{
+  outline: none;
+}
 .Pag_inicio {
     height: 100vh;
     background-color: var(--oscuro);
@@ -92,6 +95,7 @@ hr{
     margin-top: 120px;
     padding: 50px 50px;
     font-family: var(--letras); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 .form__login .form__subtitulos .subs__text h3{
     margin-bottom: 10px;
@@ -106,7 +110,6 @@ hr{
 }
 .form__login .form__subtitulos .button button a{
     padding: 5px 10px;
-    text-transform: uppercase;
     font-family: var(--letras); 
     font-size: 15px;
     background-color: var(--oscuro2);
@@ -130,12 +133,12 @@ i{
 .tabla__datos__vehiculo table{
     margin-top: 50px;
     margin-left: 210px;
-    width: 78%;
+    width: 100%;
     border-collapse: collapse;
     border: 1px solid var(--oscuro3);
     font-size: 20px;
     font-family: var(--letra_tablas);
-
+    max-width: 1200px;
 }
 .tabla__datos__vehiculo table td {
     padding: 8px;
@@ -145,20 +148,42 @@ i{
     font-weight: 450;
     color: var(--negro);
 }
-/* .boton_cargar .cargar_datos{
-    background-color: var(--white);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 400;
-    font-size: 18px;
-    border: 2.5px solid var(--gris_cambio);
-    border-radius: 5px;
-    margin-left: 120px;
-    margin-top: 60px;
+.botones__registros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
-.boton_cargar .cargar_datos a{
-    color: var(--clarote);
-} */
+.boton__ingresar__nuevo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.boton__ingresar__nuevo button {
+    margin-right: auto;
+}
+.right_elements {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.right_elements .busqueda{
+  background-color: red;
+}
+.botones__registros .input_busqueda {
+    width: 150px;
+    height: 30px;
+    margin-right: 30px;
+}
+.botones__registros .busqueda {
+    width: 150px;
+    height: 40px;
+    font-family: var(--letra_tablas);
+    padding: 10px;
+    font-size: 15px;
+    margin-right: 195px;
+}
 
 /* VEHICULOS NUEVOS */
 .ingreso h1{
@@ -174,6 +199,7 @@ i{
     justify-content: center;
     align-content: center;
     flex-direction: row;
+    margin-top: 80px;
 }
 .ingreso .formulario_veh .formulario_left label{
     display: flex;
@@ -185,11 +211,12 @@ i{
     height: 30px;
     margin-left: 20px;
     margin-bottom: 60px;
+    border-radius: var(--border);
 }
 .ingreso .formulario_veh .left .formulario_left{
     margin-top: 15px;
     font-family: var(--letras);
-    margin-right: 50px;
+    margin-right: 300px;
 }
 .ingreso .formulario_veh .left .formulario_left .combo_carros{
     width: 150px;
@@ -197,7 +224,8 @@ i{
     font-family: var(--letra_tablas);
     padding: 10px;
     font-size: 15px;
-    margin-left: 20px
+    margin-left: 20px;
+    border-radius: var(--border);
 }
 .ingreso .formulario_veh .formulario_rigth label{
     display: flex;
@@ -209,11 +237,12 @@ i{
     height: 30px;
     margin-left: 20px;
     margin-bottom: 60px;
+    border-radius: var(--border);
 }
 .ingreso .formulario_veh .rigth .formulario_rigth{
     margin-top: 15px;
     font-family: var(--letras);
-    margin-right: 50px;
+    margin-left: 150px;
 }
 hr{
     margin-bottom: 30px;
@@ -226,7 +255,7 @@ hr{
     font-size: 18px;
     border: 2.5px solid var(--gris_cambio);
     border-radius: var(--border);
-    margin-left: 600px;
+    margin-left: 55rem;
 }
 
 @media (max-width: 760px) {
@@ -287,28 +316,6 @@ a {
     font-weight: 450;
     padding: 2px;
 }
-
-/* .botones_registros {
-    display: flex;
-    align-items: center;
-    margin-top: 80px;
-    padding: 0 20px;
-    margin-left: 140px;
-}
-.botones_registros .input_busqueda{
-    width: 150px;
-    height: 30px;
-    margin-left: 750px;
-}
-.botones_registros button {
-    background-color: var(--clarote);
-    padding: 10px 50px;
-    margin-left: 50px;
-}
-.botones_registros button a {
-    color: var(--white);
-    font-size: 1.2rem;
-} */
 .combo .combo_busqueda {
     width: 150px;
     height: 40px;
@@ -360,19 +367,32 @@ a {
 
 /* SALIDA */
 .salida_ingreso{
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
-    margin: 150px;
+    flex-direction: column;
+    background-color: var(--gris_cambio);
+    margin: 200px 0px 0px 650px;
+    width: 600px;
+    border-radius: 35px;
+    padding: 50px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 .salida_ingreso label{
     font-family: var(--letras);
-    font-size: 15px; 
+    font-size: 18px;
+    padding: 10px 0; 
 }
 .salida_ingreso input{
     font-family: var(--letras);
+    padding: 10px;
     font-size: 15px;
+    border-radius: var(--border);
+    border: none;  
+    margin-bottom: 20px;
 }
-
+.salida_ingreso input:focus{
+  outline: none;
+}
 
 @media (max-width: 500px) {
     body{
