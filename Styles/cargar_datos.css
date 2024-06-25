@@ -5,8 +5,8 @@
     font-weight: 400;
     font-size: 18px;
     border: 2.5px solid var(--gris_cambio);
-    border-radius: 5px;
-    margin-left: 120px;
+    border-radius: var(--border);
+    margin-left: 210px;
     margin-top: 60px;
 }
 .boton_cargar .cargar_datos a{

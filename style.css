@@ -6,6 +6,7 @@
 @import url(Styles/registro.css);
 @import url(Styles/cargar_datos.css);
 @import url(Styles/usuarios.css);
+@import url(Styles/botones_entradas.css);
 *{
     margin: 0;
     padding: 0;
@@ -27,6 +28,7 @@
     --letra_tablas: "Montserrat", sans-serif;
     --oscuro4: #1B4F18;
     --clarito2: #35C121;
+    --border: 10px;
 }
 button{
     border: none;
@@ -127,8 +129,8 @@ i{
 }
 .tabla__datos__vehiculo table{
     margin-top: 50px;
-    margin-left: 100px;
-    width: 85%;
+    margin-left: 210px;
+    width: 78%;
     border-collapse: collapse;
     border: 1px solid var(--oscuro3);
     font-size: 20px;
@@ -223,7 +225,7 @@ hr{
     font-weight: 400;
     font-size: 18px;
     border: 2.5px solid var(--gris_cambio);
-    border-radius: 5px;
+    border-radius: var(--border);
     margin-left: 600px;
 }
 
@@ -286,17 +288,17 @@ a {
     padding: 2px;
 }
 
-.botones_registros {
+/* .botones_registros {
     display: flex;
     align-items: center;
     margin-top: 80px;
     padding: 0 20px;
-    margin-left: 20px;
+    margin-left: 140px;
 }
 .botones_registros .input_busqueda{
     width: 150px;
     height: 30px;
-    margin-left: 420px;
+    margin-left: 750px;
 }
 .botones_registros button {
     background-color: var(--clarote);
@@ -305,8 +307,8 @@ a {
 }
 .botones_registros button a {
     color: var(--white);
-    font-size: 17px;
-}
+    font-size: 1.2rem;
+} */
 .combo .combo_busqueda {
     width: 150px;
     height: 40px;
@@ -317,18 +319,43 @@ a {
 }
 
 /* ENTRADA */
-.entrada_ingreso{
-    display: flex;
+.entrada_ingreso {
+    display: inline-flex;
     justify-content: space-around;
-    margin: 150px;
+    flex-direction: column;
+    background-color: var(--gris_cambio);
+    margin: 200px 0px 0px 650px;
+    width: 600px;
+    border-radius: 35px;
+    padding: 50px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
-.entrada_ingreso label{
+.entrada_ingreso label {
     font-family: var(--letras);
-    font-size: 20px;
+    font-size: 18px;
+    padding: 10px 0; 
 }
-.entrada_ingreso input{
+.entrada_ingreso input {
     font-family: var(--letras);
+    padding: 10px;
     font-size: 15px;
+    border-radius: var(--border);
+    border: none;  
+    margin-bottom: 20px; 
+}
+.entrada_ingreso input:focus {
+    outline: none;
+}
+.boton_cargar .entrada_datos{
+    background-color: var(--white);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 400;
+    font-size: 18px;
+    border: 2.5px solid var(--gris_cambio);
+    border-radius: var(--border);
+    margin-left: 650px;
+    margin-top: 60px;
 }
 
 /* SALIDA */

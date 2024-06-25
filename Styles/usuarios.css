@@ -11,7 +11,7 @@
     font-weight: 450;
     font-size: 18px;
     border: 2px solid var(--negro);
-    border-radius: 5px;
+    border-radius: var(--border);
 }
 .botones_top .boton_registro_vehiculo button{
     background-color: var(--gris_cambio);
@@ -20,7 +20,7 @@
     font-weight: 450;
     font-size: 18px;
     border: 2px solid var(--negro);
-    border-radius: 5px;
+    border-radius: var(--border);
 }
 .botones_top .boton_rgistro_usuarios_3 button{
     background-color: var(--clarito);
@@ -29,7 +29,7 @@
     font-weight: 450;
     font-size: 18px;
     border: 2px solid var(--negro);
-    border-radius: 5px;
+    border-radius: var(--border);
 }
 .boton_ingresar_nuevo button{
     background-color: var(--clarote);
@@ -38,7 +38,7 @@
     font-weight: 400;
     font-size: 18px;
     border: 2.5px solid transparent;
-    border-radius: 5px;
+    border-radius: var(--border);
     margin-left: 120px;
     margin-top: 60px;
 }

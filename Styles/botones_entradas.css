@@ -1,0 +1,22 @@
+.botones_registros {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    padding: 0 20px;
+    margin-left: 140px;
+}
+.botones_registros .input_busqueda{
+    width: 150px;
+    height: 30px;
+    margin-left: 750px;
+}
+.botones_registros button {
+    background-color: var(--clarote);
+    padding: 10px 50px;
+    margin-left: 50px;
+    border-radius: var(--border);
+}
+.botones_registros button a {
+    color: var(--white);
+    font-size: 1.2rem;
+}
