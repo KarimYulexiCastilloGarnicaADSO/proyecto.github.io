@@ -156,33 +156,21 @@ i{
 }
 .boton__ingresar__nuevo {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 .boton__ingresar__nuevo button {
     margin-right: auto;
 }
-.right_elements {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.right_elements .busqueda{
-  background-color: red;
-}
-.botones__registros .input_busqueda {
+.right_elements .input_busqueda {
     width: 150px;
     height: 30px;
-    margin-right: 30px;
 }
-.botones__registros .busqueda {
-    width: 150px;
-    height: 40px;
-    font-family: var(--letra_tablas);
-    padding: 10px;
-    font-size: 15px;
-    margin-right: 195px;
+.right_elements .busqueda{
+  height: 40px;  
+  font-family: var(--letra_tablas);
+  font-size: 15px;
+  margin-right: 195px;
+  
 }
 
 /* VEHICULOS NUEVOS */
