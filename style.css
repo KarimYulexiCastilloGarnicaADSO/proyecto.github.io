@@ -7,31 +7,11 @@
 @import url(Styles/cargar_datos.css);
 @import url(Styles/usuarios.css);
 @import url(Styles/botones_entradas.css);
+@import url(Styles/root.css);
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-:root{
-    --white: #fff;
-    --oscuro: #253D24;
-    --titulos: "Poetsen One", sans-serif;
-    --claro: #54DC3F;
-    --negro: black;
-    --oscuro2: #1C5D17;
-    --letras: "Poppins", sans-serif;
-    --gris: #f3f2f2;
-    --clarito: #AFF4A2;
-    --gris_cambio: #ddd;
-    --oscuro3: #052702;
-    --clarote: #1D7615;
-    --letra_tablas: "Montserrat", sans-serif;
-    --oscuro4: #1B4F18;
-    --clarito2: #35C121;
-    --border: 10px;
-}
-button{
-    border: none;
 }
 input:focus{
   outline: none;
@@ -59,16 +39,12 @@ input:focus{
     height: auto;
     display: flex;
     justify-content: space-evenly;
-    /* margin-right: 200px; */
 }
-.logo__container img{
-    width: auto;
-}
-.Pag_inicio .Pag__container .botones__container {
+.botones__container {
     display: flex;
     gap: 100px;
 }
-.Pag_inicio .Pag__container .botones__container button {
+.botones__container button {
     background-color: var(--claro);
     padding: 15px 40px;
     text-transform: uppercase;
@@ -76,7 +52,7 @@ input:focus{
     font-weight: 200px;
     border: 2px solid var(--white);
 }
-.Pag_inicio .Pag__container .botones__container button a {
+.botones__container button a {
     text-decoration: none;
     color: var(--negro);
 }
@@ -97,18 +73,18 @@ hr{
     font-family: var(--letras); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
-.form__login .form__subtitulos .subs__text h3{
+.subs__text h3{
     margin-bottom: 10px;
 }
-.form__login .form__subtitulos .subs__text input{
+.subs__text input{
     height: 30px;
     width: 300px;
 }
-.form__login .form__subtitulos .button{
+.form__subtitulos .button{
     margin-top: 50px;
     margin-left: 100px
 }
-.form__login .form__subtitulos .button button a{
+.button button a{
     padding: 5px 10px;
     font-family: var(--letras); 
     font-size: 15px;
@@ -166,11 +142,15 @@ i{
     height: 30px;
 }
 .right_elements .busqueda{
-  height: 40px;  
-  font-family: var(--letra_tablas);
-  font-size: 15px;
-  margin-right: 195px;
-  
+    height: 40px;  
+    font-family: var(--letra_tablas);
+    font-size: 15px;
+    margin-right: 195px;
+    background-color: var(--white);
+    border: solid 1px var(--negro);
+}
+.right_elements .busqueda a{
+    color: var(--clarote);
 }
 
 /* VEHICULOS NUEVOS */
@@ -182,31 +162,32 @@ i{
     font-size: 22px;
     color: var(--oscuro4);
 }
-.ingreso .formulario_veh{
+.formulario_veh{
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
     margin-top: 80px;
 }
-.ingreso .formulario_veh .formulario_left label{
+.formulario_left{
+    margin-top: 15px;
+    font-family: var(--letras);
+    margin-right: 300px;
+}
+.formulario_left label{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    color: var(--clarote);
 }
-.ingreso .formulario_veh .formulario_left input{
+.formulario_left input{
     width: 250px;
     height: 30px;
     margin-left: 20px;
     margin-bottom: 60px;
     border-radius: var(--border);
 }
-.ingreso .formulario_veh .left .formulario_left{
-    margin-top: 15px;
-    font-family: var(--letras);
-    margin-right: 300px;
-}
-.ingreso .formulario_veh .left .formulario_left .combo_carros{
+.combo_carros{
     width: 150px;
     height: 40px;
     font-family: var(--letra_tablas);
@@ -215,28 +196,29 @@ i{
     margin-left: 20px;
     border-radius: var(--border);
 }
-.ingreso .formulario_veh .formulario_rigth label{
+.formulario_rigth{
+    margin-top: 15px;
+    font-family: var(--letras);
+    margin-left: 150px;
+}
+.formulario_rigth label{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    color: var(--clarote);
 }
-.ingreso .formulario_veh .formulario_rigth input{
+.formulario_rigth input{
     width: 250px;
     height: 30px;
     margin-left: 20px;
     margin-bottom: 60px;
     border-radius: var(--border);
 }
-.ingreso .formulario_veh .rigth .formulario_rigth{
-    margin-top: 15px;
-    font-family: var(--letras);
-    margin-left: 150px;
-}
 hr{
     margin-bottom: 30px;
 }
 .boton_guardar button{
-    background-color: var(--gris);
+    background-color: var(--white);
     padding: 3px 20px;
     font-family: var(--letras); 
     font-weight: 400;
@@ -245,8 +227,10 @@ hr{
     border-radius: var(--border);
     margin-left: 55rem;
 }
-
-@media (max-width: 760px) {
+.boton_guardar button a{
+    color: var(--clarote);
+}
+/* @media (max-width: 760px) {
     body{
         background-color: red;   
     }
@@ -294,7 +278,7 @@ hr{
         margin-left: 320px;
         margin-bottom: 30px;
     }
-}
+} */
 
 /* REGISTRO ENTRADA */
 a {
@@ -304,7 +288,7 @@ a {
     font-weight: 450;
     padding: 2px;
 }
-.combo .combo_busqueda {
+.combo_busqueda {
     width: 150px;
     height: 40px;
     font-family: var(--letra_tablas);
@@ -341,7 +325,7 @@ a {
 .entrada_ingreso input:focus {
     outline: none;
 }
-.boton_cargar .entrada_datos{
+.entrada_datos{
     background-color: var(--white);
     padding: 3px 20px;
     font-family: var(--letras); 
@@ -382,7 +366,44 @@ a {
   outline: none;
 }
 
-@media (max-width: 500px) {
+/* USUARIO NUEVO */
+.nuevo_usuario .bt_nuevo_usuario {
+    background-color: var(--clarote);
+    padding: 3px 20px;
+    font-family: var(--letras); 
+    font-weight: 400;
+    font-size: 18px;
+    border: 2.5px solid transparent;
+    border-radius: var(--border);
+    margin-left: 190px;
+    margin-top: 60px;
+}
+.nuevo_usuario .bt_nuevo_usuario a{
+    color: var(--white);
+}
+.filtro{
+    display: inline-flex;
+    gap: 30px;
+}
+.input_busqueda_usuarios{
+    width: 150px;
+    height: 30px;
+    margin-left: 61rem;
+}
+.busqueda{
+    height: 40px;  
+    font-family: var(--letra_tablas);
+    font-size: 15px;
+    margin-right: 195px;
+    background-color: var(--white);
+    border-radius: var(--border);
+    border: solid 1px var(--negro); 
+}
+.busqueda a{
+    color: var(--clarote);
+    padding: 15px;
+}
+/* @media (max-width: 500px) {
     body{
         background-color: blue;
     }
@@ -457,17 +478,11 @@ a {
     .input_busqueda{
         background-color: green;
     }
-    /* .combo{
-        background-color: pink;
-
-    } */
     .combo .combo_busqueda {
         width: 150px;
         height: 40px;
         font-family: var(--letra_tablas);
         padding: 10px;
         font-size: 15px;
-        /* margin-left: 30px; */
-        /* background-color: red; */
     }
-}
+} */

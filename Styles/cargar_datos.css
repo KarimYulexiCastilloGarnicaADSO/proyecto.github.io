@@ -12,3 +12,6 @@
 .boton_cargar .cargar_datos a{
     color: var(--clarote);
 }
+.boton_cargar .entrada_datos a{
+    color: var(--clarote);
+}
