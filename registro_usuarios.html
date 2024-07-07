@@ -38,12 +38,69 @@
     </section>
     <section class="nuevo_usuario">
       <button class="bt_nuevo_usuario"><a href="usuario_nuevo.html">Ingresar nuevo</a></button>
-      <div class="filtro"> 
+      <div class="filtro">
         <input type="text" class="input_busqueda_usuarios">
         <button class="busqueda"><a href="#">Buscar</a></button>
       </div>
     </section>
-    <!-- section de ingresar nuevo usuario, el boton de buscar y el label para buscar por documento, los label e inputs para modificar
+    <section class="modificacion">
+      <div class="modificaciones">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="nombre">
+        </div>
+        <div class="campo">
+          <label for="apellido">Apellido</label>
+          <input type="text" class="apellido">
+        </div>
+        <div class="campo">
+          <label for="telefono">Telefono</label>
+          <input type="number" class="telefono">
+        </div>
+        <div class="campo">
+          <label for="tipo_usuario">Tipo Usuario</label>
+          <input type="text" class="tipo_usuario">
+        </div>
+        <div class="campo">
+          <label for="tipo_jornada">Tipo Jornada</label>
+          <input type="text" class="tipo_jornada">
+        </div>
+        <div>
+          <button class="boton_modificar"><a href="#">Modificar</a></button>
+        </div>
+      </div>
+    </section>
+    <section class="tabla__datos__vehiculo">
+      <table>
+          <thead>
+              <tr class="tabla__encabezados">
+                  <th>Documento </th>
+                  <th>Nombre </th>
+                  <th>Apellido</th>
+                  <th>Telefono</th>
+                  <th>Tipo Usuario</th>
+                  <th>Tipo Jornada</th>
+              </tr>
+          </thead>
+          <tbody class="tabla__cuerpo">
+              <tr>
+                  <td>1096065559</td>
+                  <td>Karim</td>
+                  <td>Castillo</td>
+                  <td>3102376341</td>
+                  <td>Aprendiz</td>
+                  <td>Diurna</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+          </tbody>
+      </table>
+  </section>
+    <!-- section de Ingresar nuevo usuario, el boton de buscar y el label para buscar por documento, los label e inputs para modificar
      que son de nombre, apellido, telefono, tp usuario, tp jornada y el boton de modificar, la tabla de docuemnto, nombre, apellido, telefono, tp usuario, tp jornada -->
 </body>
 </html>

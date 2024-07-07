@@ -4,8 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    hola
+    <header>
+        <section class="logeo">
+            <nav class="logeo__nav">
+                <div class="logeo__container">
+                    <div class="logo__logeo">
+                        <img src="Imagenes/logo_Sena_negro.png" alt="">
+                    </div>
+                    <div class="title__logeo">
+                        <h1>Registro de parqueadero de Instructores y Aprendices</h1>
+                    </div>      
+                    <div class="boton__logeo">
+                        <button><a href="registro_usuarios.html">Volver</a></button>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <section class="ingreso">
+        <h1>INGRESO DE UN NUEVO USUARIO</h1>
+        <div class="formulario_veh">
+            <div class="left">
+                <form class="formulario_left">
+                    <label>Ingresa el numero de documento</label>
+                    <input type="text">
+                    <label>Ingresa el nombre</label>
+                    <input type="text">
+                    <label>Ingrese la jornada</label>
+                    <input type="text">
+                    <select name="select" class="combo_carros">
+                        <option value="value1">Seleccione</option>
+                        <option value="value2">Diurna</option>
+                        <option value="value2">Nocturna</option>
+                    </select>
+                </form>
+            </div>
+            <div class="rigth">
+                <form class="formulario_rigth">
+                    <label for="">Ingresa el número de teléfono</label>
+                    <input type="text">
+                    <label for="">Ingresa el apellido</label>
+                    <input type="text">
+                    <label>Ingrese el tipo de usuario</label>
+                    <input type="text">
+                    <select name="select" class="combo_carros">
+                        <option value="value1">Seleccione</option>
+                        <option value="value2">Aprendiz</option>
+                        <option value="value2">Instructor</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="boton_ingresar">
+            <button class="guardar"><a href="registro_usuarios.html">INGRESAR</a></button>
+        </div>
+    </section>
 </body>
 </html>
