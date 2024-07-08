@@ -137,6 +137,10 @@ i{
 .boton__ingresar__nuevo button {
     margin-right: auto;
 }
+.right_elements{
+    padding: auto 0;
+    margin-right: 195px;
+}
 .right_elements .input_busqueda {
     width: 150px;
     height: 30px;
@@ -145,7 +149,7 @@ i{
     height: 40px;  
     font-family: var(--letra_tablas);
     font-size: 15px;
-    margin-right: 195px;
+    margin-left: 30px;
     background-color: var(--white);
     border: solid 1px var(--negro);
 }
@@ -380,7 +384,7 @@ a {
     font-size: 18px;
     border: 2.5px solid transparent;
     border-radius: var(--border);
-    margin-left: 190px;
+    margin-left: 215px;
     margin-top: 60px;
 } 
 .nuevo_usuario .bt_nuevo_usuario a {
@@ -402,16 +406,17 @@ a {
     background-color: var(--white);
     border-radius: var(--border);
     border: solid 1px var(--negro); 
+    margin-right: 215px;
 }
 .busqueda a {
     color: var(--clarote);
-    padding: 15px;
+    padding: 65px;
 }
 .modificaciones {
     display: flex;
     flex-wrap: wrap; 
     gap: 60px   ; 
-    margin-left: 100px;
+    margin-left: 215px;
     margin-top: 30px;
 } 
 .campo {
