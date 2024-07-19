@@ -166,75 +166,56 @@ i{
     font-size: 22px;
     color: var(--oscuro4);
 }
-/* .formulario_veh{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    margin-top: 80px;
-}
-.formulario_left{
-    margin-top: 15px;
-    font-family: var(--letras);
-    margin-right: 300px;
-}
-.formulario_left label{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    color: var(--clarote);
-}
-.formulario_left input{
-    width: 250px;
-    height: 30px;
-    margin-left: 20px;
-    margin-bottom: 60px;
-    border-radius: var(--border);
-} */
-h1{
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-}
+
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
 }
+
 form > label{
-    padding: var(--padding);
+    padding: 10px;
 }
+
 form > input{
-    padding: var(--padding);
-    width: var(--width);
-    border-radius: var(--borde);
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
     border: 2px solid pink;
+    font-family: var(--letras);
 }
+
 form > input:focus{
     outline: none;
 }
+
 a{
     color: black;
     text-decoration: none;
 }
+
 select{
-    padding: var(--padding);
-    width: var(--width);
+    padding: 10px;
+    width: 300px;
     margin-bottom: 30px;
-    border-radius: var(--borde);
+    border-radius: 5px;
     border: 2px solid pink;
+    font-family: var(--letras);
 }
+
 .boton{
     margin: 30px;
-    padding: var(--padding);
-    width: var(--width);
+    padding: 10px;
+    width: 300px;
     background-color: pink;
     border: none;
-    border-radius: var(--borde);
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    font-family: var(--letras);
 }
+
 .combo_carros{
     width: 150px;
     height: 40px;
