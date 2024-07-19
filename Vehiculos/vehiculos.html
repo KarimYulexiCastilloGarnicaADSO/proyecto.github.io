@@ -31,49 +31,37 @@
             <button><i class="fa-solid fa-car"></i>Vehiculos</button>
         </div>
         <div class="boton__registro__vehiculo">
-            <button><i class="fa-solid fa-square-parking"></i><a href="../Registro/registro_entrada.html">Registro vehiculos</a></button>
+            <a href="../Registro/registro_entrada.html"> <i class="fa-solid fa-square-parking"></i>Registro vehiculos</a>
         </div>
         <div class="boton__rgistro__usuarios">
-            <button><i class="fa-regular fa-id-card"></i><a href="../Usuarios/registro_usuarios.html">Registro usuarios</a></button>
+            <a href="../Usuarios/registro_usuarios.html"> <i class="fa-regular fa-id-card"></i>Registro usuarios</a>
         </div>
     </section>
     <section class="botones__registros">
       <section class="boton__ingresar__nuevo">
-        <button><a href="../Vehiculos/vehiculo_nuevo.html" class="">Ingreso de vehiculo</a></button>
+        <a href="../Vehiculos/vehiculo_nuevo.html" class="">Ingreso de vehiculo</a>
         <div class="right_elements">
             <input type="text" class="input_busqueda">
-            <button class="busqueda"><a href="#">Buscar</a></button>
+            <a href="#" class="busqueda">Buscar</a>
         </div>
       </section>
     </section>
+    
+    <table id="table_vehiculos">
+        <thead>
+            <tr>
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Color</th>
+                <th>Tipo Vehiculo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
 
-    <section class="tabla__datos__vehiculo">
-        <table>
-            <thead>
-                <tr class="tabla__encabezados">
-                    <th>Placa</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Color</th>
-                    <th>Tipo Vehiculo</th>
-                </tr>
-            </thead>
-            <tbody class="tabla__cuerpo">
-                <tr>
-                    <td>XXX333</td>
-                    <td>Renault</td>
-                    <td>12</td>
-                    <td>Rojo</td>
-                    <td>Carro</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+        </tbody>
+    </table>
+    <script src="../Js/listar.js"></script>
 </body>
 </html>

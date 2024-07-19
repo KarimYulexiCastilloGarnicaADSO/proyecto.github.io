@@ -106,23 +106,31 @@ i{
     color: var(--negro);
     margin-right: 10px;
 }
-.tabla__datos__vehiculo table{
-    margin-top: 50px;
-    margin-left: 210px;
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid var(--oscuro3);
-    font-size: 20px;
-    font-family: var(--letra_tablas);
-    max-width: 1200px;
+table{
+    margin: 0 auto;
+    border: 1px solid var(--oscuro4);
 }
-.tabla__datos__vehiculo table td {
-    padding: 8px;
-    border: 1px solid var(--oscuro3);
-    text-align: center;
-    font-family: var(--letra_tablas);
-    font-weight: 450;
-    color: var(--negro);
+th{
+    padding: 30px 30px ;
+    border: 1px solid var(--claro) ;
+    font-family: var(--letras);
+}
+td{
+    padding: 20px 20px ;
+    border: 1px solid var(--claro);
+    font-family: var(--letras);
+}
+.boton_eliminar{
+    margin: 30px;
+    padding: 10px;
+    width: 100px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-family: var(--letras);
 }
 .botones__registros {
     display: flex;
@@ -134,7 +142,7 @@ i{
     display: flex;
     width: 100%;
 }
-.boton__ingresar__nuevo button {
+.boton__ingresar__nuevo a {
     margin-right: auto;
 }
 .right_elements{

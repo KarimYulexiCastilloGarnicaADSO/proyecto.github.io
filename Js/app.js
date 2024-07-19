@@ -61,3 +61,5 @@ async function enviar(datos) {
 }
 
 $form.addEventListener("submit" , capturar)
+
+
