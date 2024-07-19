@@ -1,0 +1,17 @@
+{
+    "vehiculos":
+    [
+        {
+            "id":1,
+            "tipo_vehiculo": "carro"
+        },
+        {
+            "id":2,
+            "tipo_vehiculo": "moto"
+        },
+        {
+            "id":3,
+            "tipo_vehiculo": "bicicleta"
+        }
+    ]
+}

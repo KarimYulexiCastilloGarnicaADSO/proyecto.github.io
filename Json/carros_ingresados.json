@@ -1,0 +1,40 @@
+{
+    "carros":
+    [
+        {
+            "placa": "jhg123",
+            "marca": "mazda",
+             "modelo": "sedan",
+             "color": "negro",
+             "tipo_vehiculo": "carro"
+        },
+        {
+            "placa": "jhg123",
+            "marca": "mazda",
+             "modelo": "sedan",
+             "color": "negro",
+             "tipo_vehiculo": "carro"
+        },
+        {
+            "placa": "jhg123",
+            "marca": "mazda",
+             "modelo": "sedan",
+             "color": "negro",
+             "tipo_vehiculo": "carro"
+        },
+        {
+            "placa": "jhg123",
+            "marca": "mazda",
+             "modelo": "sedan",
+             "color": "negro",
+             "tipo_vehiculo": "carro"
+        },
+        {
+            "placa": "jhg123",
+            "marca": "mazda",
+             "modelo": "sedan",
+             "color": "negro",
+             "tipo_vehiculo": "carro"
+        }
+    ]
+}

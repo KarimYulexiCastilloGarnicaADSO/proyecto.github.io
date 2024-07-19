@@ -26,35 +26,46 @@
     </header>
     <section class="ingreso">
         <h1>INGRESO DE UN NUEVO VEHICULO</h1>
-        <div class="formulario_veh">
+        <!-- <div class="formulario_veh">
             <div class="left">
-                <form class="formulario_left">
+                <form action="" class="formulario_left">
                     <label>Ingrese la placa del vehiculo a ingresar</label>
-                    <input type="text">
+                    <input type="text" id="placa">
                     <label>Ingrese la marca del vehiculo a ingresar</label>
-                    <input type="text">
+                    <input type="text" id="marca">
                     <label>Ingrese el tipo vehiculo a ingresar</label>
-                    <input type="text">
-                    <select name="select" class="combo_carros">
+                    <select class="combo_carros" id="tipo">
                         <option value="value1">Seleccione</option>
-                        <option value="value2">Carro</option>
-                        <option value="value2">Moto</option>
-                        <option value="value2">BIcicleta</option>
                     </select>
                 </form>
             </div>
             <div class="rigth">
                 <form class="formulario_rigth">
                     <label for="">Ingrese el modelo del vehiculo a ingresar</label>
-                    <input type="text">
+                    <input type="text" id="modelo">
                     <label for="">Ingrese el color del vehiculo a ingresar</label>
-                    <input type="text">
+                    <input type="text" id="color">
                 </form>
             </div>
-        </div>
-        <div class="boton_guardar">
-            <button class="guardar"><a href="vehiculos.html">GUARDAR</a></button>
-        </div>
+        </div> -->
+        <h1>Formulario</h1>
+        <form action="" class="formulario">
+            <input type="text" id="placa" placeholder="Ingresa la placa" autocomplete="off">
+            <label for=""></label>
+            <input type="text" id="marca" placeholder="Ingrese la marca" autocomplete="off">
+            <label for=""></label>
+            <select class="combo" id="tipo">
+                <option value="value1">Seleccionar</option>
+            </select>
+            <input type="text" id="modelo" placeholder="Ingrese el modelo" autocomplete="off">
+            <label for=""></label>
+            <input type="text" id="color" placeholder="Ingrese el color" autocomplete="off">
+            <button class="boton" type="submit">Registrar</button>
+        </form>
+        <!-- <div class="boton_guardar">
+            <button class="guardar"><a href="">GUARDAR</a></button>
+        </div> -->
     </section>
+    <script src="../Js/app.js"></script>
 </body>
 </html>
