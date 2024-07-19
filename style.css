@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(Styles/navbar.css);
@@ -26,8 +26,8 @@ input:focus{
 }
 .Pag__title h1 {
     color: var(--white);
-    font-family: var(--titulos);
-    font-weight: 50;  
+    font-family: var(--letras);
+    font-weight: 500;  
 }
 .Pag_inicio .Pag__container {
     display: flex;
@@ -159,10 +159,10 @@ i{
 
 /* VEHICULOS NUEVOS */
 .ingreso h1{
-    font-family: var(--titulos);
+    font-family: var(--letras);
     text-align: center;
     margin: 30px;
-    font-weight: 100;
+    font-weight: 800;
     font-size: 22px;
     color: var(--oscuro4);
 }
@@ -182,7 +182,7 @@ form > input{
     padding: 10px;
     width: 300px;
     border-radius: 5px;
-    border: 2px solid pink;
+    border: 2px solid var(--claro);
     font-family: var(--letras);
 }
 
@@ -190,30 +190,31 @@ form > input:focus{
     outline: none;
 }
 
-a{
-    color: black;
-    text-decoration: none;
-}
-
 select{
     padding: 10px;
     width: 300px;
     margin-bottom: 30px;
     border-radius: 5px;
-    border: 2px solid pink;
+    border: 2px solid var(--claro);
     font-family: var(--letras);
 }
-
 .boton{
+    display: flex;
+    justify-content: center;
     margin: 30px;
     padding: 10px;
     width: 300px;
-    background-color: pink;
+    background-color: var(--claro);
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     font-family: var(--letras);
+}
+.boton:hover{
+    transition: 1s;
+    background-color: var(--clarote);
+    color: var(--white);
 }
 
 .combo_carros{
@@ -245,19 +246,6 @@ select{
 }
 hr{
     margin-bottom: 30px;
-}
-.boton_guardar button{
-    background-color: var(--white);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 400;
-    font-size: 18px;
-    border: 2.5px solid var(--gris_cambio);
-    border-radius: var(--border);
-    margin-left: 55rem;
-}
-.boton_guardar button a{
-    color: var(--clarote);
 }
 /* @media (max-width: 760px) {
     body{

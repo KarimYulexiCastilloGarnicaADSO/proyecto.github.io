@@ -40,11 +40,11 @@
     font-weight: 500;
 }
 
-.logeo .logeo__nav .logeo__container .boton__logeo {
+.logeo .logeo__nav .logeo__container .boton__logeo a {
     padding: 15px 40px;
 }
 
-.logeo .logeo__nav .logeo__container .boton__logeo button a {
+.logeo .logeo__nav .logeo__container .boton__logeo  a {
     padding: 5px 10px;
     font-family: var(--letras);
     font-size: 15px;
