@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-around;
 }
-.botones__top .boton__vehiculo__2 button{
+.botones__top .boton__vehiculo__2 a{
     background-color: var(--gris_cambio);
     padding: 3px 20px;
     font-family: var(--letras); 
@@ -13,7 +13,7 @@
     border: 2px solid var(--negro);
     border-radius: var(--border);
 }
-.botones__top .boton__registro__vehiculo_2 button{
+.botones__top .boton__registro__vehiculo_2 a{
     background-color: var(--clarito);
     padding: 3px 20px;
     font-family: var(--letras); 
@@ -22,7 +22,7 @@
     border: 2px solid var(--negro);
     border-radius: var(--border);
 }
-.botones__top .boton__rgistro__usuarios button{
+.botones__top .boton__rgistro__usuarios a{
     background-color: var(--gris_cambio);
     padding: 3px 20px;
     font-family: var(--letras); 

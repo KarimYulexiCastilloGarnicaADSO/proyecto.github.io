@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
 @import url(Styles/navbar.css);
 @import url(Styles/vehiculos.css);
 @import url(Styles/registro.css);
@@ -15,6 +15,12 @@
 }
 input:focus{
   outline: none;
+}
+.error{
+    border: solid 1px red;
+}
+.correcto{
+    border: solid 1px blue;
 }
 .Pag_inicio {
     height: 100vh;
@@ -41,18 +47,18 @@ input:focus{
     justify-content: space-evenly;
 }
 .botones__container {
-    display: flex;
+    display: inline-flex;
     gap: 100px;
 }
-.botones__container button {
+.botones__container a {
     background-color: var(--claro);
-    padding: 15px 40px;
+    padding: 15px 30px;
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 200px;
     border: 2px solid var(--white);
 }
-.botones__container button a {
+.botones__container a {
     text-decoration: none;
     color: var(--negro);
 }
@@ -79,12 +85,13 @@ hr{
 .subs__text input{
     height: 30px;
     width: 300px;
+    border: none;
 }
-.form__subtitulos .button{
+.form__subtitulos .button a{
     margin-top: 50px;
     margin-left: 100px
 }
-.button button a{
+.button a{
     padding: 5px 10px;
     font-family: var(--letras); 
     font-size: 15px;
@@ -98,7 +105,7 @@ a{
     text-decoration: none;
     color: var(--negro);
 }
-.boton__ingresar__nuevo button a{
+.boton__ingresar__nuevo  a{
     color: var(--white);
     text-decoration: none;
 }
@@ -153,14 +160,14 @@ td{
     width: 150px;
     height: 30px;
 }
-.right_elements .busqueda{
+.right_elements a{
     height: 40px;  
     font-family: var(--letra_tablas);
     margin-left: 30px;
     background-color: var(--white);
     border: solid 1px var(--negro);
 }
-.right_elements .busqueda a{
+.right_elements a{
     color: var(--clarote);
     font-size: 17px;
 }
@@ -306,10 +313,10 @@ hr{
 } */
 
 /* REGISTRO ENTRADA */
-a {
+a{
     text-decoration: none;
     color: var(--negro);
-    font-family: var(--letras);
+    font-family: var(--letra_tablas);
     font-weight: 450;
     padding: 2px;
 }
@@ -320,6 +327,7 @@ a {
     padding: 10px;
     font-size: 15px;
     margin-left: 30px;
+    border: var(--negro);
 }
 
 /* ENTRADA */

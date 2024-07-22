@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-around;
 }
-.botones__top .boton__vehiculo button{
+.botones__top .boton__vehiculo {
     background-color: var(--clarito);
     padding: 3px 20px;
     font-family: var(--letras); 
@@ -25,11 +25,6 @@
 .botones__top .boton__rgistro__usuarios a{
     background-color: var(--gris_cambio);
     padding: 3px 20px;
-    /* display: inline-block;
-    width: 300px;
-    height: 55px;
-    text-align: center;
-    line-height: 45px; */
     font-family: var(--letras); 
     font-weight: 450;
     font-size: 18px;

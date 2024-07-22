@@ -40,15 +40,20 @@
     font-weight: 500;
 }
 
-.logeo .logeo__nav .logeo__container .boton__logeo a {
+.boton__logeo a {
     padding: 15px 40px;
 }
 
-.logeo .logeo__nav .logeo__container .boton__logeo  a {
+.boton__logeo  a {
     padding: 5px 10px;
     font-family: var(--letras);
     font-size: 15px;
     background-color: var(--oscuro2);
     color: var(--white);
     text-decoration: none;
+}
+
+.boton__logeo a:hover{
+    transition: 1s;
+    background-color: var(--clarote);
 }
