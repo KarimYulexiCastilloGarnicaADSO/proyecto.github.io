@@ -327,7 +327,7 @@ a{
     padding: 10px;
     font-size: 15px;
     margin-left: 30px;
-    border: var(--negro);
+    border: solid 1px black;
 }
 
 /* ENTRADA */
