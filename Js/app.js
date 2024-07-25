@@ -1,3 +1,6 @@
+import Marca from "./letras.js";
+import Modelo from "./numeros4.js";
+import Placa from "./placa.js";
 /**
  * Carga los tipos de vehiculo
  */
@@ -16,10 +19,9 @@ consultar()
 /**
  * Buscamos por id en el HTML
  */
-const $form = document.querySelector('.formulario')
-// const form = document.querySelector('.formulario')
+const $form = document.querySelector('#formulario')
 console.log($form)
-const select = document.querySelector('.formulario > select')
+const select = document.querySelector('#formulario > select')
 console.log(select)
 const placa = document.querySelector('#placa')
 const marca = document.querySelector('#marca')
@@ -35,131 +37,30 @@ console.log(formu_usu)
  * Valida los campos*/
 
 
-
-const Marca = (event) =>{
-    console.log(event)
-    let regex = /^[A-Za-zAà-ÿ\s]+$/
-    if (!regex.test(event.key)) {
-        event.preventDefault()
-        marca.classList.remove("correcto")
-        marca.classList.add("error")
-
-    }
-    else{
-        marca.classList.add("correcto")
-        marca.classList.remove("error")
-    }
-}
-const Modelo = (event) =>{
-    console.log(event)
-    let regex = /^([0-9])*$/
-    if (!regex.test(event.key)) {
-        event.preventDefault()
-        modelo.classList.remove("correcto")
-        modelo.classList.add("error")
-
-    }
-    else{
-        modelo.classList.add("correcto")
-        modelo.classList.remove("error")
-    }
-}
-const Color = (event) =>{
-    console.log(event)
-    let regex = /^[A-Za-zAà-ÿ\s]+$/
-    if (!regex.test(event.key)) {
-        event.preventDefault()
-        color.classList.remove("correcto")
-        color.classList.add("error")
-
-    }
-    else{
-        color.classList.add("correcto")
-        color.classList.remove("error")
-    }
-}
-// const letras2 = (event) =>{
-//     console.log(event)
-//     let regex = /^[A-Za-zAà-ÿ\s]+$/
-//     if (!regex.test(event.key)) {
-//         event.preventDefault()
-//         apellido.classList.remove("correcto")
-//         apellido.classList.add("error")
-
-//     }
-//     else{
-//         apellido.classList.add("correcto")
-//         apellido.classList.remove("error")
-//     }
-// }
+placa.addEventListener("keypress", (event) => {
+    Placa(event, placa);
+})
+placa.addEventListener("blur", (event) => {
+    Placa(event, placa);
+})
 marca.addEventListener("keypress", (event) => {
     Marca(event, marca)
+})
+marca.addEventListener("blur", (event) => {
+    Marca(event, marca)
+})
+color.addEventListener("keypress", (event) => {
+    Marca(event, color )
+})
+color.addEventListener("blur", (event) => {
+    Marca(event, color)
 })
 modelo.addEventListener("keypress", (event) => {
     Modelo(event, modelo)
 })
-color.addEventListener("keypress", (event) => {
-    Color(event, color )
-})
-// apellido.addEventListener("keypress", (event) => {
-//     letras2(event, apellido)
-// })
-
-
-
-// const solo_numeros = (event) => {
-//     if (event.keyCode < 48 || event.keyCode > 57) {
-//         event.preventDefault()
-//     }
-// } 
-
-
-// const numeros = (event, elemento) => {
-//     let valor = elemento.value.length === 10; 
-//     console.log(valor, elemento.value.length) 
-//     if(valor){ 
-//         event.preventDefault()
-//         elemento.classList.add("correcto")
-//         elemento.classList.remove("error")
-//         // doc.classList.remove("correcto")
-//         // doc.classList.add("error")
-//     }
-//     else{
-//         elemento.classList.remove("correcto")
-//         elemento.classList.add("error")
-//         // doc.classList.add("correcto")
-//         // doc.classList.remove("error")
-//     }
-// }
-
-
-// telefono.addEventListener("keypress", (event) => {
-//     solo_numeros(event, telefono)
-// })
-// // telefono.add("input", (event) => {
-// //     numeros(event, telefono)
-// // })
-// doc.addEventListener("keypress", (event) => {
-//     numeros(event,doc)
-// })
-
-
-// const email = (event,elemento) => {
-//     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-//     if (regex.test(elemento.value)) {
-//         event.preventDefault()
-//         correo.classList.add("correcto")
-//         correo.classList.remove("error")
-//     }
-//     else{
-//         correo.classList.add("error")
-//         correo.classList.remove("correcto")
-//     }
-// }
-// correo.addEventListener("blur", (event) => {
-//     email(event, correo)
-// })
-
+modelo.addEventListener("blur", (event) => {
+    Modelo(event, modelo)
+}) 
 
 /**
  * Capturar los inputs para enviarle los datos
@@ -167,10 +68,28 @@ color.addEventListener("keypress", (event) => {
 
 const capturar = (event) =>{
     event.preventDefault()
+
+    let camposValidos = true;
+    const campos = [placa, marca, $tipo, modelo, color];
+    
+    campos.forEach(campo => {
+        if (!campo.value.trim()) {
+            campo.classList.add("error");
+            camposValidos = false;
+        } else {
+            campo.classList.remove("error");
+        }
+    });
+
+    if (!camposValidos) {
+        console.error('Todos los campos son obligatorios');
+        return;
+    }
+
     const datos = {
         placa: placa.value,
         marca: marca.value,
-        $tipo: $tipo.value,
+        tipo: $tipo.value,  
         modelo: modelo.value,
         color: color.value
     }
@@ -183,16 +102,26 @@ const capturar = (event) =>{
  * Envia los datos
  */
 async function enviar(datos) {
-    fetch('http://127.0.0.1:3000/vehiculos', {
-        method: 'POST',
-        body: JSON.stringify(datos),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
+    try {
+        const response = await fetch('http://127.0.0.1:3000/vehiculos', {
+            method: 'POST',
+            body: JSON.stringify(datos),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        });
+
+        const json = await response.json();
+        console.log(json);
+
+        if (!response.ok) {
+            throw new Error(json.message || 'Error al guardar los datos');
+        }
+
+    } catch (error) {
+        console.error('Error al enviar los datos:', error);
+    }
 }
 
-$form.addEventListener("submit" , capturar)
+$form.addEventListener('submit', capturar);
 
