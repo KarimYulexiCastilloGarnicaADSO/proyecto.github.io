@@ -1,6 +1,7 @@
 import Marca from "./letras.js";
 import Modelo from "./numeros4.js";
 import Placa from "./placa.js";
+import valid from "./validar.js";
 /**
  * Carga los tipos de vehiculo
  */
@@ -59,33 +60,50 @@ modelo.addEventListener("blur", (event) => {
     Modelo(event, modelo)
 }) 
 
+
+$form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let validar = valid(event, '#formulario [required]')
+    // alert(validar)
+    if (validar) {
+        const datos = {
+            placa: placa.value,
+            marca: marca.value,
+            modelo: modelo.value,
+            color: color.value,
+            $tipo: $tipo.value
+        }
+        enviar(datos)
+        // location
+        location.href ="vehiculos.html";
+        console.log(datos)
+        // enviar(datos)
+        alert("bien")
+    }
+    else{
+        alert("mal")
+    }
+})
+
+
 /**
  * Capturar los inputs para enviarle los datos
  */
 
-const capturar = (event) =>{
-    event.preventDefault()
-    const datos = {
-        placa: placa.value,
-        marca: marca.value,
-        modelo: modelo.value,
-        color: color.value,
-        $tipo: $tipo.value
-    }
-    enviar(datos)
-}
+// const capturar = (event) => {
+//     event.preventDefault()
+
+// }
 
 async function enviar(datos) {
     fetch('http://127.0.0.1:3000/vehiculos', {
         method: 'POST',
         body: JSON.stringify(datos),
         headers: {
-          'Content-type': 'application/json; charset=UTF-8',
+            'Content-type': 'application/json; charsert=UTF-8',
         },
-      })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
+    })
+    .then( (response) => response.json() )
+    .then((json) => console.log(json))
 }
-
-$form.addEventListener("submit" , capturar)
-
+// $form.addEventListener("submit", capturar)

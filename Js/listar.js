@@ -59,4 +59,4 @@ async function eliminarvehiculo(placa, fila) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', obtener);
+document.addEventListener('DOMContentLoaded', obtener());
