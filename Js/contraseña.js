@@ -1,4 +1,4 @@
-const Placa = (event, elemento) => {
+const Contraseña = (event, elemento) => {
     
     if (elemento.value.trim() === "") {
         elemento.classList.remove("correcto");
@@ -9,4 +9,4 @@ const Placa = (event, elemento) => {
     }
 }
 
-export default Placa;
+export default Contraseña;

@@ -1,11 +1,12 @@
 import Marca from "./letras.js"
 import Modelo2 from "./numeros10.js"
+import Contraseña from "./contraseña.js"
 
 const usuv = document.querySelector('#usuariovig')
 const apev = document.querySelector('#apellidovig')
 const docv = document.querySelector('#documentovig')
 const contv = document.querySelector('#contraseñavig')
-console.log(contv)
+
 
 docv.addEventListener("keypress", (event) => {
     Modelo2(event, docv)
@@ -25,16 +26,6 @@ usuv.addEventListener("keypress", (event) => {
 usuv.addEventListener("blur", (event) => {
     Marca(event, usuv)
 })
-
-const Contraseña = (element, elemento) => {
-    if (element.value === "") {
-        elemento.classList.remove("correcto");
-        elemento.classList.add("error");
-    } else {
-        elemento.classList.add("error");
-        elemento.classList.remove("correcto");
-    }
-}
 contv.addEventListener("keypress", (event) => {
     Contraseña(event, contv);
 })

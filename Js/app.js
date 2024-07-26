@@ -28,10 +28,7 @@ const marca = document.querySelector('#marca')
 const $tipo = document.querySelector('#tipo')
 const modelo =document.querySelector('#modelo')
 const color = document.querySelector('#color')
-const usuario = document.querySelector('#usuario')
-const contraseña = document.querySelector('#contraseña ')
 const formu_usu = document.querySelector('.form__subtitulos')
-console.log(formu_usu)
 
 /**
  * Valida los campos*/
@@ -68,60 +65,27 @@ modelo.addEventListener("blur", (event) => {
 
 const capturar = (event) =>{
     event.preventDefault()
-
-    let camposValidos = true;
-    const campos = [placa, marca, $tipo, modelo, color];
-    
-    campos.forEach(campo => {
-        if (!campo.value.trim()) {
-            campo.classList.add("error");
-            camposValidos = false;
-        } else {
-            campo.classList.remove("error");
-        }
-    });
-
-    if (!camposValidos) {
-        console.error('Todos los campos son obligatorios');
-        return;
-    }
-
     const datos = {
         placa: placa.value,
         marca: marca.value,
-        tipo: $tipo.value,  
         modelo: modelo.value,
-        color: color.value
+        color: color.value,
+        $tipo: $tipo.value
     }
     enviar(datos)
 }
 
-
-
-/**
- * Envia los datos
- */
 async function enviar(datos) {
-    try {
-        const response = await fetch('http://127.0.0.1:3000/vehiculos', {
-            method: 'POST',
-            body: JSON.stringify(datos),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-        });
-
-        const json = await response.json();
-        console.log(json);
-
-        if (!response.ok) {
-            throw new Error(json.message || 'Error al guardar los datos');
-        }
-
-    } catch (error) {
-        console.error('Error al enviar los datos:', error);
-    }
+    fetch('http://127.0.0.1:3000/vehiculos', {
+        method: 'POST',
+        body: JSON.stringify(datos),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
 }
 
-$form.addEventListener('submit', capturar);
+$form.addEventListener("submit" , capturar)
 

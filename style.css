@@ -1,6 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
 @import url(Styles/navbar.css);
 @import url(Styles/vehiculos.css);
 @import url(Styles/registro.css);
@@ -46,65 +44,29 @@ input:focus{
     display: flex;
     justify-content: space-evenly;
 }
-.botones__container {
-    display: inline-flex;
-    gap: 100px;
-}
 .botones__container a {
+    display: inline-block;
+    margin: 30px;
+    padding: 10px;
+    width: 200px;
     background-color: var(--claro);
-    padding: 15px 30px;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 200px;
-    border: 2px solid var(--white);
+    border-radius: var(--border);
+    font-size: 16px;
+    font-family: var(--letras);
 }
-.botones__container a {
-    text-decoration: none;
-    color: var(--negro);
+.botones__container a i {
+    transition: 1s; 
 }
-
-/*LOGEO*/
-hr{
-    width: 300px;
-    margin-top: 5px;
-    margin-top: 10px;
-}
-.form__login{
-    width: 400px;
-    height: 350px;
-    background-color: var(--gris);
-    margin: auto;
-    margin-top: 120px;
-    padding: 50px 50px;
-    font-family: var(--letras); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-}
-.subs__text h3{
-    margin-bottom: 10px;
-}
-.subs__text input{
-    height: 30px;
-    width: 300px;
-    border: none;
-}
-.form__subtitulos .button a{
-    margin-top: 50px;
-    margin-left: 100px
-}
-.button a{
-    padding: 5px 10px;
-    font-family: var(--letras); 
-    font-size: 15px;
-    background-color: var(--oscuro2);
+.botones__container a:hover {
+    transition: 1s;
+    background-color: var(--clarote);
     color: var(--white);
-    text-decoration: none;
+}
+.botones__container a:hover i {
+    color: var(--white); 
 }
 
 /*VEHICULOS*/
-a{
-    text-decoration: none;
-    color: var(--negro);
-}
 .boton__ingresar__nuevo  a{
     color: var(--white);
     text-decoration: none;
@@ -145,7 +107,7 @@ td{
     align-items: center;
     padding: 20px;
 }
-.boton__ingresar__nuevo {
+.boton__ingresar__nuevo  {
     display: flex;
     width: 100%;
 }
@@ -162,12 +124,10 @@ td{
 }
 .right_elements a{
     height: 40px;  
-    font-family: var(--letra_tablas);
+    font-family: var(--letras);
     margin-left: 30px;
     background-color: var(--white);
     border: solid 1px var(--negro);
-}
-.right_elements a{
     color: var(--clarote);
     font-size: 17px;
 }
@@ -323,53 +283,17 @@ a{
 .combo_busqueda {
     width: 150px;
     height: 40px;
-    font-family: var(--letra_tablas);
+    font-family: var(--letras);
     padding: 10px;
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 30px;
     border: solid 1px black;
 }
-
-/* ENTRADA */
-.entrada_ingreso {
-    display: inline-flex;
-    justify-content: space-around;
-    flex-direction: column;
-    background-color: var(--gris_cambio);
-    margin: 200px 0px 0px 650px;
-    width: 600px;
-    border-radius: 35px;
-    padding: 50px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-}
-.entrada_ingreso label {
+/*ENTRADA*/
+.label_registros{
+    font-size: 14px;
     font-family: var(--letras);
-    font-size: 18px;
-    padding: 10px 0; 
 }
-.entrada_ingreso input {
-    font-family: var(--letras);
-    padding: 10px;
-    font-size: 15px;
-    border-radius: var(--border);
-    border: none;  
-    margin-bottom: 20px; 
-}
-.entrada_ingreso input:focus {
-    outline: none;
-}
-.entrada_datos{
-    background-color: var(--white);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 400;
-    font-size: 18px;
-    border: 2.5px solid var(--gris_cambio);
-    border-radius: var(--border);
-    margin-left: 650px;
-    margin-top: 60px;
-}
-
 /* SALIDA */
 .salida_ingreso{
     display: inline-flex;
