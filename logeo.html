@@ -26,11 +26,11 @@
     </header>
     <section class="ingreso">
         <h1>LOGEO</h1>
-        <form action="" id="formulario">
-            <input type="text" id="usuario" placeholder="Ingrese su usuario" autocomplete="off">
+        <form action="" id="formulario" novalidate>
+            <input type="text" id="usuario" placeholder="Ingrese su usuario" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="contraseña" placeholder="Ingrese su contraseña" autocomplete="off">
-            <a href="/Vehiculos/vehiculos.html" class="boton" type="submit">Ingresar</a>
+            <input type="password" id="contraseña" placeholder="Ingrese su contraseña" autocomplete="off" required>
+            <button class="boton" type="submit">Ingresar</button>
         </form>
     </section>
     <script type="module" src="/Js/tomar.js"></script>

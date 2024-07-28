@@ -25,15 +25,15 @@
         </section>
     </header>
     <section class="ingreso">
-        <form action="" id="formulario">
-            <label for="" class="label_registros">Ingrese la fecha y hora de entrada</label>
-            <input type="datetime-local" id="fch_entrada" placeholder="" autocomplete="off">
+        <form action="" id="formulario" novalidate>
+            <label for="" class="label_registros"></label>
+            <input type="datetime-local" id="fch_entrada" placeholder="" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="placa_entrada" placeholder="Ingrese la placa del vehiculo" autocomplete="off">
-            <a href="registro_entrada.html" class="boton" type="submit">Entrada</a>
+            <input type="text" id="placa_entrada" placeholder="Ingrese la placa del vehiculo" autocomplete="off" required>
+            <button class="boton" type="submit">Entrada</button>
         </form>
     </section>
-    <script src="../Js/select2.js"></script>
     <script type="module" src="../Js/registros.js"></script>
+    <script src="../Js/select2.js"></script>
 </body>
 </html>

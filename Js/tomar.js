@@ -1,7 +1,8 @@
 import Marca from "./letras.js"
 import Contraseña from "./contraseña.js"
+import valid from "./validar.js"
 
-const formu_usu = document.querySelector('.form__subtitulos')
+const formu_usu = document.querySelector('#formulario')
 const usuario = document.querySelector('#usuario')
 const contraseña = document.querySelector('#contraseña')
 console.log(formu_usu, usuario, contraseña)
@@ -20,17 +21,41 @@ contraseña.addEventListener("blur", (event) => {
   Contraseña(event, contraseña)
 })
 
-// async function registrar(dt) {
-  //     fetch('http://127.0.0.1:3000/Usuarios', {
-//         method: 'POST',
-//         body: JSON.stringify(dt),
-//         headers: {
-//           'Content-type': 'application/json; charset=UTF-8',
-//         },
-//       })
-//         .then((response) => response.json())
-//         .then((json) => console.log(json));
-// }
+
+
+formu_usu.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let validar = valid(event, '#formulario [required]')
+  // alert(validar)
+  if (validar) {
+      const datos = {
+          usuario: usuario.value,
+          contraseña: contraseña.value
+      }
+      enviar(datos)
+      // location
+      location.href ="/Vehiculos/vehiculos.html";
+      console.log(datos)
+      // enviar(datos)
+      alert("bien")
+  }
+  else{
+      alert("mal")
+  }
+})
+
+
+async function enviar(datos) {
+  fetch('http://127.0.0.1:3000/Usuarios', {
+      method: 'POST',
+      body: JSON.stringify(datos),
+      headers: {
+          'Content-type': 'application/json; charsert=UTF-8',
+      },
+  })
+  .then( (response) => response.json() )
+  .then((json) => console.log(json))
+}
 
 // formu_usu.addEventListener("submit" , tomar)
 

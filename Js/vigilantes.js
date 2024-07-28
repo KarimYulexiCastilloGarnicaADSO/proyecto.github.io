@@ -1,12 +1,14 @@
 import Marca from "./letras.js"
 import Modelo2 from "./numeros10.js"
 import Contraseña from "./contraseña.js"
+import valid from "./validar.js"
 
 const usuv = document.querySelector('#usuariovig')
 const apev = document.querySelector('#apellidovig')
 const docv = document.querySelector('#documentovig')
 const contv = document.querySelector('#contraseñavig')
-
+const formu = document.querySelector('#formulario')
+console.log(formu)
 
 docv.addEventListener("keypress", (event) => {
     Modelo2(event, docv)
@@ -33,3 +35,37 @@ contv.addEventListener("blur", (event) => {
     Contraseña(event, contv);
 })
 
+formu.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let validar = valid(event, '#formulario [required]')
+    // alert(validar)
+    if (validar) {
+        const datos = {
+            usuv: usuv.value,
+            apev: apev.value,
+            docv: docv.value,
+            contv: contv.value
+        }
+        enviar(datos)
+        // location
+        location.href ="/logeo.html";
+        console.log(datos)
+        // enviar(datos)
+        alert("bien")
+    }
+    else{
+        alert("mal")
+    }
+})
+
+async function enviar(datos) {
+    fetch('http://127.0.0.1:3000/Vigilante', {
+        method: 'POST',
+        body: JSON.stringify(datos),
+        headers: {
+            'Content-type': 'application/json; charsert=UTF-8',
+        },
+    })
+    .then( (response) => response.json() )
+    .then((json) => console.log(json))
+  }

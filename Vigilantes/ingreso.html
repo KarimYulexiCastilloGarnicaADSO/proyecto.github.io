@@ -26,15 +26,15 @@
     </header>
     <section class="ingreso">
         <h1>INGRESO DE UN NUEVO VIGILANTE</h1>
-        <form action="" id="formulario">
-            <input type="text" id="usuariovig" placeholder="Ingrese su nombre que sera su usuario" autocomplete="off">
+        <form action="" id="formulario" novalidate>
+            <input type="text" id="usuariovig" placeholder="Ingrese su nombre que sera su usuario" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="apellidovig" placeholder="Ingrese su apellido" autocomplete="off">
+            <input type="text" id="apellidovig" placeholder="Ingrese su apellido" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="documentovig" placeholder="Ingrese su numero de documento" autocomplete="off">
+            <input type="text" id="documentovig" placeholder="Ingrese su numero de documento" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="contraseñavig" placeholder="Ingrese una contraseña" autocomplete="off">
-            <a href="../logeo.html" class="boton" type="submit">Ingresar</a>
+            <input type="password" id="contraseñavig" placeholder="Ingrese una contraseña" autocomplete="off" required>
+            <button class="boton" type="submit">Ingresar</button>
         </form>
     </section>
     <script type="module" src="../Js/vigilantes.js"></script>
