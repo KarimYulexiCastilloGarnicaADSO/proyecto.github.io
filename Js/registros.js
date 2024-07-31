@@ -3,8 +3,10 @@ import Placa from "./placa.js"
 import valid from "./validar.js"
 
 const fecha2 = document.querySelector('#fch_entrada')
+const fecha = document.querySelector('#fch_salida')
 const placa2 = document.querySelector('#placa_entrada')
 const formulario = document.querySelector('#formulario')
+const codigo = document.querySelector('#codigo')
 console.log(formulario)
 
 fecha2.addEventListener("keypress", (event) => {
@@ -19,7 +21,18 @@ placa2.addEventListener("keypress", (event) => {
 placa2.addEventListener("blur", (event) => {
     Placa(event, placa2)
 })
-
+fecha.addEventListener("keypress", (event) => {
+    Contraseña(event, fecha)
+})
+fecha.addEventListener("blur", (event) => {
+    Contraseña(event, fecha)
+})
+codigo.addEventListener("keypress", (event) => {
+    Contraseña(event, codigo)
+})
+codigo.addEventListener("blur", (event) => {
+    Contraseña(event, codigo)
+})
 
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -27,8 +40,10 @@ formulario.addEventListener("submit", (event) => {
     // alert(validar)
     if (validar) {
         const datos = {
-            fecha2: fecha2.value,
-            placa2: placa2.value
+            codigo: codigo.value,
+            entrada: fecha2.value,
+            placa: placa2.value,
+            salida: fecha.value
         }
         enviar(datos)
         // location
@@ -42,8 +57,10 @@ formulario.addEventListener("submit", (event) => {
     }
 })
 
+
+//fUNCION PARA ENVIAR DATOS 
 async function enviar(datos) {
-    fetch('http://127.0.0.1:3000/Registros_entrada', {
+    fetch('http://127.0.0.1:3000/Registros', {
         method: 'POST',
         body: JSON.stringify(datos),
         headers: {
@@ -51,5 +68,13 @@ async function enviar(datos) {
         },
     })
     .then( (response) => response.json() )
-    .then((json) => console.log(json))
-  }
+    .then((json) => {
+        codigo.value = "";
+        fecha2.value = "";
+        placa2.value = "";
+        fecha.value = "";
+    });
+}
+
+
+

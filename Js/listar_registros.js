@@ -2,61 +2,64 @@
  * Lista los registros
  */
 // Función para obtener y listar los datos
+const bodyTable = document.getElementById("bodyTable");
+let fragmento = document.createDocumentFragment();
 async function obtener() {
-    try {
-        const response = await fetch('http://127.0.0.1:3000/Registros_entrada');
-        if (!response.ok) {
-            throw new Error(`Error: ${response.status}`);
-        }
-        const datos = await response.json();
+    const request = await fetch("http://127.0.0.1:3000/Registros");
+    let response = await request.json();
 
-        // Obtener el elemento tbody donde se mostrarán los registros
-        const $tbody = document.querySelector('#table_registros tbody');
+    response.forEach((elemento) => {
+        let tr = document.createElement("tr");
 
-        // Limpiar cualquier contenido previo en el tbody
-        $tbody.innerHTML = '';
+        let td = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+        let td5 = document.createElement("td");
 
-        // Iterar sobre cada registro y crear elementos tr y td
-        datos.forEach(registro => {
-            const $tr = document.createElement('tr');
-            $tr.innerHTML = `
-                <td>${registro.codigo}</td>
-                <td>${registro.entrada}</td>
-                <td>${registro.placa}</td>
-                <td>${registro.salida}</td>
-                <td>${registro.$fecha}</td>
-                <td><button class="boton_eliminar">Eliminar</button></td>
-            `;
+        let btnDelete = document.createElement("button");
+        btnDelete.classList.add('boton_eliminar')
+        btnDelete.textContent = "Eliminar"
+        btnDelete.setAttribute("data-id", elemento.codigo);
+        btnDelete.setAttribute("codigo", "btnEliminar");
 
-            // Añadir un event listener al botón de eliminar
-            $tr.querySelector('.boton_eliminar').addEventListener('click', () => {
-                eliminarUsuario(registro.codigo, $tr);
-            });
+        let form = document.createElement("form");
+        form.appendChild(btnDelete);
 
-            $tbody.appendChild($tr);
-        });
-    } catch (error) {
-        console.log('Error al obtener los datos', error);
-    }
+
+        let btnModify = document.createElement("button");
+
+        td.textContent = elemento.codigo;
+        td2.textContent = elemento.entrada;
+        td3.textContent = elemento.placa;
+        td4.textContent = elemento.salida;
+        td5.appendChild(form);
+
+        tr.appendChild(td);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tr.appendChild(td5);
+
+        fragmento.appendChild(tr);
+    })
+    bodyTable.appendChild(fragmento);
+
+
+    let button = document.querySelectorAll("#btnEliminar");
+    button.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            eliminarusuario(btn.getAttribute("data-id"));
+        })
+    })
 }
 
-// Función para eliminar un registro
-async function eliminarUsuario(codigo, fila) {
-    try {
-        const response = await fetch(`http://127.0.0.1:3000/vehiculos/${codigo}`, {
-            method: 'DELETE'
-        });
 
-        if (response.ok) {
-            // Eliminar la fila del DOM si la solicitud fue exitosa
-            fila.remove();
-            console.log(`Usuario con id ${codigo} eliminado exitosamente.`);
-        } else {
-            console.error("Error al eliminar usuario");
-        }
-    } catch (error) {
-        console.error("Error al eliminar el usuario", error);
-    }
+async function eliminarusuario(codigo) {
+    console.log(codigo)
+    const ola = await fetch(`http://127.0.0.1:3000/Registros${codigo}` ,{
+        method: "DELETE"
+    })
+    obtener();
 }
-
-document.addEventListener('DOMContentLoaded', obtener);
+obtener()

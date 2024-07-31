@@ -6,34 +6,34 @@
 }
 .botones_top .boton_vehiculo_3 a{
     background-color: var(--gris_cambio);
-    padding: 3px 20px;
+    padding: 5px 20px;
     font-family: var(--letras); 
-    font-weight: 450;
+    font-weight: 400;
     font-size: 18px;
     border: 2px solid var(--negro);
     border-radius: var(--border);
 }
 .botones_top .boton_registro_vehiculo a{
     background-color: var(--gris_cambio);
-    padding: 3px 20px;
+    padding: 5px 20px;
     font-family: var(--letras); 
-    font-weight: 450;
+    font-weight: 400;
     font-size: 18px;
     border: 2px solid var(--negro);
     border-radius: var(--border);
 }
 .botones_top .boton_rgistro_usuarios_3 a{
     background-color: var(--clarito);
-    padding: 3px 20px;
+    padding: 5px 20px;
     font-family: var(--letras); 
-    font-weight: 450;
+    font-weight: 400;
     font-size: 18px;
     border: 2px solid var(--negro);
     border-radius: var(--border);
 }
 .boton_ingresar_nuevo button{
     background-color: var(--clarote);
-    padding: 3px 20px;
+    padding: 5px 20px;
     font-family: var(--letras); 
     font-weight: 400;
     font-size: 18px;

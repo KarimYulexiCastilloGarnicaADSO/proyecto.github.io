@@ -103,7 +103,13 @@ async function enviar(datos) {
             'Content-type': 'application/json; charsert=UTF-8',
         },
     })
-    .then( (response) => response.json() )
-    .then((json) => console.log(json))
+    .then((response) => response.json())
+    .then((json) => {
+        placa.value = "";
+        marca.value = "";
+        select.value = "";
+        modelo.value = "";
+        color.value = "";   
+    });
 }
 // $form.addEventListener("submit", capturar)

@@ -101,6 +101,11 @@ td{
     color: white;
     font-family: var(--letras);
 }
+.boton_eliminar:hover{
+    transition: 1s;
+    background-color: brown;
+    color: var(--white);
+}
 .botones__registros {
     display: flex;
     justify-content: space-between;
@@ -113,16 +118,19 @@ td{
 }
 .boton__ingresar__nuevo a {
     margin-right: auto;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 35px;
 }
-.right_elements{
+/* .right_elements{
     padding: auto 0;
     margin-right: 195px;
 }
 .right_elements .input_busqueda {
     width: 150px;
     height: 30px;
-}
-.right_elements a{
+} */
+/* .right_elements a{
     height: 40px;  
     font-family: var(--letras);
     margin-left: 30px;
@@ -130,7 +138,7 @@ td{
     border: solid 1px var(--negro);
     color: var(--clarote);
     font-size: 17px;
-}
+} */
 
 /* VEHICULOS NUEVOS */
 .ingreso h1{
