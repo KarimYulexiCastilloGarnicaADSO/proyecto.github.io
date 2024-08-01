@@ -24,61 +24,29 @@
             </nav>
         </section>
     </header>
-    <!-- <section class="ingreso">
-        <h1>INGRESO DE UN NUEVO USUARIO</h1>
-        <div class="formulario_veh">
-            <div class="left">
-                <form class="formulario_left">
-                    <label>Ingresa el numero de documento</label>
-                    <input type="text">
-                    <label>Ingresa el nombre</label>
-                    <input type="text">
-                    <label>Ingrese la jornada</label>
-                    <input type="text">
-                    <select name="select" class="combo_carros">
-                        <option value="value1">Seleccione</option>
-                        <option value="value2">Diurna</option>
-                        <option value="value2">Nocturna</option>
-                    </select>
-                </form>
-            </div>
-            <div class="rigth">
-                <form class="formulario_rigth">
-                    <label for="">Ingresa el número de teléfono</label>
-                    <input type="text">
-                    <label for="">Ingresa el apellido</label>
-                    <input type="text">
-                    <label>Ingrese el tipo de usuario</label>
-                    <input type="text">
-                    <select name="select" class="combo_carros">
-                        <option value="value1">Seleccione</option>
-                        <option value="value2">Aprendiz</option>
-                        <option value="value2">Instructor</option>
-                    </select>
-                </form>
-            </div>
-        </div>
-        <div class="boton_ingresar">
-            <button class="guardar"><a href="registro_usuarios.html">INGRESAR</a></button>
-        </div>
-    </section> -->
-
     <section class="ingreso">
         <h1>INGRESO DE UN NUEVO USUARIO</h1>
         <form action="" id="formulario" novalidate>
-            <input type="text" id="codigo" placeholder="Ingrese el numero de documento" autocomplete="off" required>
+            <input type="text" id="documento" placeholder="Ingrese el numero de documento" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="fch_entrada" placeholder="Ingrese el nombre" autocomplete="off" required>
+            <input type="text" id="nombre" placeholder="Ingrese el nombre" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" placeholder="Ingrese el apellido" autocomplete="off" required>
+            <input type="text" id="apellido" placeholder="Ingrese el apellido" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="fch_salida" placeholder="Ingrese el numero de telefono" autocomplete="off" required>
+            <input type="text" id="telefono" placeholder="Ingrese el numero de telefono" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="" placeholder="Ingrese el tipo de usuario">
-            <label for=""></label>
-            <input type="text" id="" placeholder="Ingrese el tipo de jornada">
+            <select class="combo"  id="tp_usuario" required>
+                <option value="value1" disabled selected>Seleccionar</option>
+            </select>
+            <select class="combo" id="tp_jornada" required>
+                <option value="value1" disabled selected>Seleccionar</option>
+            </select>
             <button class="boton" type="submit">Registro</button>
+            <!-- registro_usuarios.html -->
         </form>
     </section>
+    <script type="module" src="../Js/select_u.js"></script>
+    <script type="module" src="../Js/select_j.js"></script>
+    <script type="module" src="../Js/usuario.js"></script>
 </body>
 </html>
