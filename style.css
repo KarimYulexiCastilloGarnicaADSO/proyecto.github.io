@@ -121,24 +121,8 @@ td{
     font-size: 16px;
     font-weight: 400;
     padding: 10px 35px;
+    margin-bottom: 30px;
 }
-/* .right_elements{
-    padding: auto 0;
-    margin-right: 195px;
-}
-.right_elements .input_busqueda {
-    width: 150px;
-    height: 30px;
-} */
-/* .right_elements a{
-    height: 40px;  
-    font-family: var(--letras);
-    margin-left: 30px;
-    background-color: var(--white);
-    border: solid 1px var(--negro);
-    color: var(--clarote);
-    font-size: 17px;
-} */
 
 /* VEHICULOS NUEVOS */
 .ingreso h1{
@@ -230,55 +214,18 @@ select{
 hr{
     margin-bottom: 30px;
 }
-/* @media (max-width: 760px) {
-    body{
-        background-color: red;   
-    }
+@media (max-width: 700px) {
     .Pag__container {
-        width: 100%;
-    }   
-    .logo__container{
+        flex-direction: column;
+        width: 80vw;
+    }
 
-        width: auto;
+    .botones__container a {
+        width: 150px;
+        margin: 20px;
+        padding: 8px;
     }
-    .logo__container img{
-        width: 100%;
-    }
-    .botones__container{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .Pag_inicio .Pag__container .botones__container {
-        gap: 50px;
-    }
-    .Pag_inicio .Pag__container .botones__container button {
-        padding: 10px 30px;
-    }
-    .botones__container .boton_vehiculo{
-        margin-left: 40px;
-    }
-    .tabla_datos_vehiculo table{
-        width: 75%;
-        margin-left: 55px;
-    }
-    .boton_ingresar_nuevo button {
-        margin-left: 55px;
-    }
-    .boton_cargar .cargar_datos{
-        margin-left: 55px;
-    }
-    .boton_guardar button{
-        margin-left: 420px;
-    }
-    .formulario_left{
-        margin-left: 35px;
-    }
-    .boton_guardar button{
-        margin-left: 320px;
-        margin-bottom: 30px;
-    }
-} */
+}
 
 /* REGISTRO ENTRADA */
 a{
@@ -332,7 +279,7 @@ a{
 }
 
 /* USUARIO NUEVO */
-.nuevo_usuario {
+/* .nuevo_usuario {
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -393,7 +340,7 @@ a{
     width: 122px; 
     padding: 8px; 
     box-sizing: border-box; 
-}
+} */
 .boton_modificar{
     height: 40px;  
     font-family: var(--letra_tablas);
@@ -408,7 +355,7 @@ a{
 .boton_modificar a{
     color: var(--clarote);
 }
-.boton_ingresar{
+/* .boton_ingresar{
     background-color: var(--white);
     padding: 3px 20px;
     font-family: var(--letras); 
@@ -422,87 +369,21 @@ a{
 .boton_ingresar a{
     font-size: 15px;
     color: var(--clarote);
-}
-/* @media (max-width: 500px) {
-    body{
-        background-color: blue;
-    }
-    .Pag_inicio{
-        height: 765px;
-        width: 100%;
-    }
-    .logo__container{
-        width: 100%;
-    }
-    .Pag__title h1 {
-        font-weight: 300;
-        font-size: 23px; 
-        text-align: center;
-    }
-    .Pag_inicio .Pag__container {
-        display: flex;
-        flex-direction: column;
-    }
-    .Pag_inicio .Pag__container .logo__container img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        margin-left: 170px;
-    }
-    .Pag_inicio .Pag__container .botones__container {
-        gap: 40px;
-        margin-top: 150px;
-    }
-    .Pag_inicio .Pag__container .botones__container button {
-        padding: 5px 10px;
-    }
-    .logeo .logeo__nav .Pag__container .Pag__title h1 {
-        font-size: 15px;
-    }
-    .logeo .logeo__nav .Pag__container .boton__logeo {
-        padding: 15px;
-    }
-    .botones_top .boton_rgistro_usuarios{
-        margin-right: 9px;
-    }
-    .botones_top button {
-        font-size: 15px;
-        margin-left: 5px;
-        gap: 20px;
-    }
-    .formulario_left{
-        font-size: 15px;
-    }
-    .ingreso .formulario_veh .formulario_left input{
-        width: 130px;
-        height: 20px;
-    }
-    .formulario_rigth{
-        font-size: 15px;
-    }
-    .ingreso .formulario_veh .formulario_rigth input{
-        width: 130px;
-        height: 20px;
-    }
-    .ingreso .formulario_veh .left .formulario_left .combo_carros{
-        width: 150px;
-        height: 40px;
-        font-size: 15px;
-        margin-bottom: 40px;
-    }
-    .boton_guardar button{
-        margin-top: 30px;
-        margin-left: 200px;
-    }
-    .input_busqueda{
-        background-color: green;
-    }
-    .combo .combo_busqueda {
-        width: 150px;
-        height: 40px;
-        font-family: var(--letra_tablas);
-        padding: 10px;
-        font-size: 15px;
-    }
 } */
+@media (max-width: 500px) {
+    .Pag__title h1 {
+        font-size: 24px;
+    }
+
+    .Pag__container {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .botones__container a {
+        width: 100px;
+        margin: 15px;
+        padding: 6px;
+        font-size: 14px;
+    }
+}

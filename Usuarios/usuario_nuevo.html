@@ -24,7 +24,7 @@
             </nav>
         </section>
     </header>
-    <section class="ingreso">
+    <!-- <section class="ingreso">
         <h1>INGRESO DE UN NUEVO USUARIO</h1>
         <div class="formulario_veh">
             <div class="left">
@@ -61,6 +61,24 @@
         <div class="boton_ingresar">
             <button class="guardar"><a href="registro_usuarios.html">INGRESAR</a></button>
         </div>
+    </section> -->
+
+    <section class="ingreso">
+        <h1>INGRESO DE UN NUEVO USUARIO</h1>
+        <form action="" id="formulario" novalidate>
+            <input type="text" id="codigo" placeholder="Ingrese el numero de documento" autocomplete="off" required>
+            <label for=""></label>
+            <input type="text" id="fch_entrada" placeholder="Ingrese el nombre" autocomplete="off" required>
+            <label for=""></label>
+            <input type="text" placeholder="Ingrese el apellido" autocomplete="off" required>
+            <label for=""></label>
+            <input type="text" id="fch_salida" placeholder="Ingrese el numero de telefono" autocomplete="off" required>
+            <label for=""></label>
+            <input type="text" id="" placeholder="Ingrese el tipo de usuario">
+            <label for=""></label>
+            <input type="text" id="" placeholder="Ingrese el tipo de jornada">
+            <button class="boton" type="submit">Registro</button>
+        </form>
     </section>
 </body>
 </html>
