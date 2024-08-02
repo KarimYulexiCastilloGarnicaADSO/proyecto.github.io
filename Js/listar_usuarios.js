@@ -2,8 +2,21 @@
  * Lista los usuarios
  */
 // Función para obtener y listar los datos
+
+let link = 'modificar_usuarios.html'
 const bodyTable = document.getElementById("bodyTable");
 let fragmento = document.createDocumentFragment();
+
+let tabla = document.querySelector(".tabla")
+
+tabla.addEventListener("click", function(event) {
+    if (event.target.classList.contains("boton_modificar_u")) {
+        let fila = event.target.closest("tr")
+        let idUsuario = fila.querySelector(".idUsuario").innerText;
+        localStorage.setItem("id", idUsuario);
+    }
+
+})
 
 async function obtener() {
     const request = await fetch("http://127.0.0.1:3000/Registro_usuarios_vehiculos");
@@ -19,14 +32,19 @@ async function obtener() {
         let td5 = document.createElement("td");
         let td6 = document.createElement("td");
         let td7 = document.createElement("td");
+        let td8 = document.createElement("td");
+
+        td.classList.add("idUsuario");
 
         // Botón de modificar
-        let btnModify = document.createElement("a");
+        let btnModify = document.createElement("button");
         btnModify.classList.add('boton_modificar_u');
         btnModify.textContent = "Modificar";
         btnModify.setAttribute("data-id", elemento.id);
         btnModify.setAttribute("id", "btnModificar");
-        btnModify.setAttribute("href", "modificar_usuarios.html")
+        
+
+
 
         // Botón de eliminar
         let btnDelete = document.createElement("button");
@@ -39,13 +57,14 @@ async function obtener() {
         form.appendChild(btnModify);
         form.appendChild(btnDelete);
 
-        td.textContent = elemento.documento;
-        td2.textContent = elemento.nombre;
-        td3.textContent = elemento.apellido;
-        td4.textContent = elemento.telefono;
-        td5.textContent = elemento.tp_usuario;
-        td6.textContent = elemento.tp_jornada;
-        td7.appendChild(form);
+        td.textContent = elemento.id;
+        td2.textContent = elemento.documento;
+        td3.textContent = elemento.nombre;
+        td4.textContent = elemento.apellido;
+        td5.textContent = elemento.telefono;
+        td6.textContent = elemento.tp_usuario;
+        td7.textContent = elemento.tp_jornada;
+        td8.appendChild(form);
 
         tr.appendChild(td);
         tr.appendChild(td2);
@@ -54,6 +73,12 @@ async function obtener() {
         tr.appendChild(td5);
         tr.appendChild(td6);
         tr.appendChild(td7);
+        tr.appendChild(td8);
+
+        btnModify.addEventListener("click", (event)=>{
+            event.preventDefault();
+            location.href = link;
+        })
 
         fragmento.appendChild(tr);
     });
@@ -84,17 +109,4 @@ async function eliminarvehiculo(id) {
     });
     obtener();
 }
-
-//MODIFICAR
-async function modificarusuario(id) {
-    console.log(id);
-    const response = await fetch(`http://127.0.0.1:3000/Registro_usuarios_vehiculos/${id}`, {
-        method: "PUT",
-        body: JSON.stringify({
-
-        })
-    });
-    obtener();
-}
-
 obtener();
