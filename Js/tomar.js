@@ -37,10 +37,10 @@ formu_usu.addEventListener("submit", (event) => {
       location.href ="/Vehiculos/vehiculos.html";
       console.log(datos)
       // enviar(datos)
-      alert("bien")
+      alert("Bienvenido")
   }
   else{
-      alert("mal")
+      alert("Por  favor ingrese su nombre de usuario y una contraseña valida")
   }
 })
 

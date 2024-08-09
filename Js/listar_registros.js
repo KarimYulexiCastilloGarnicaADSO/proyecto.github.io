@@ -35,15 +35,16 @@ async function obtener() {
         td2.textContent = elemento.entrada;
         td3.textContent = elemento.placa;
         td4.textContent = elemento.salida;
-        td5.textContent = elemento.acciones;
-        td6.appendChild(form);
+        td5.appendChild(form)
+        // td5.textContent = elemento.acciones;
+        // td6.appendChild(form);
 
         tr.appendChild(td);
         tr.appendChild(td2);
         tr.appendChild(td3);
         tr.appendChild(td4);
         tr.appendChild(td5);
-        tr.appendChild(td6);
+        // tr.appendChild(td6);
 
         fragmento.appendChild(tr);
     });

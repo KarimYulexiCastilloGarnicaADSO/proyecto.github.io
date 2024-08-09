@@ -78,10 +78,10 @@ $form.addEventListener("submit", (event) => {
         location.href ="vehiculos.html";
         console.log(datos)
         // enviar(datos)
-        alert("bien")
+        alert("Formulario enviado")
     }
     else{
-        alert("mal")
+        alert("Por favor llene todos los campos antes de enviar el formulario")
     }
 })
 
