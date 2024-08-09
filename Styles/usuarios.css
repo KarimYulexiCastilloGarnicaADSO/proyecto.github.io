@@ -1,10 +1,10 @@
-.botones_top {
+.botones__top {
     margin-top: 55px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.botones_top .boton_vehiculo_3 a{
+.botones__top .boton_vehiculo_3 a{
     background-color: var(--gris_cambio);
     padding: 5px 20px;
     font-family: var(--letras); 
@@ -13,7 +13,7 @@
     border: 2px solid var(--negro);
     border-radius: var(--border);
 }
-.botones_top .boton_registro_vehiculo a{
+.botones__top .boton_registro_vehiculo a{
     background-color: var(--gris_cambio);
     padding: 5px 20px;
     font-family: var(--letras); 
@@ -22,7 +22,7 @@
     border: 2px solid var(--negro);
     border-radius: var(--border);
 }
-.botones_top .boton_rgistro_usuarios_3 a{
+.botones__top .boton_rgistro_usuarios_3 a{
     background-color: var(--clarito);
     padding: 5px 20px;
     font-family: var(--letras); 

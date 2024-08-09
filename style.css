@@ -6,6 +6,7 @@
 @import url(Styles/usuarios.css);
 @import url(Styles/botones_entradas.css);
 @import url(Styles/root.css);
+@import url(Styles/siderbar.css);
 *{
     margin: 0;
     padding: 0;
@@ -243,18 +244,6 @@ select{
 hr{
     margin-bottom: 30px;
 }
-@media (max-width: 700px) {
-    .Pag__container {
-        flex-direction: column;
-        width: 80vw;
-    }
-
-    .botones__container a {
-        width: 150px;
-        margin: 20px;
-        padding: 8px;
-    }
-}
 
 /* REGISTRO ENTRADA */
 a{
@@ -307,69 +296,6 @@ a{
   outline: none;
 }
 
-/* USUARIO NUEVO */
-/* .nuevo_usuario {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-} 
-.nuevo_usuario .bt_nuevo_usuario {
-    background-color: var(--clarote);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 400;
-    font-size: 18px;
-    border: 2.5px solid transparent;
-    border-radius: var(--border);
-    margin-left: 215px;
-    margin-top: 60px;
-} 
-.nuevo_usuario .bt_nuevo_usuario a {
-    color: var(--white);
-} 
-.filtro {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-} 
-.input_busqueda_usuarios {
-    width: 150px;
-    height: 30px;
-} 
-.busqueda {
-    height: 40px;  
-    font-family: var(--letra_tablas);
-    font-size: 15px;
-    background-color: var(--white);
-    border-radius: var(--border);
-    border: solid 1px var(--negro); 
-    margin-right: 215px;
-}
-.busqueda a {
-    color: var(--clarote);
-    padding: 65px;
-}
-.modificaciones {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 60px   ; 
-    margin-left: 215px;
-    margin-top: 30px;
-} 
-.campo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-}
-.campo label {
-    margin-bottom: 5px; 
-    font-family: var(--letras);
-}
-.campo input {
-    width: 122px; 
-    padding: 8px; 
-    box-sizing: border-box; 
-} */
 .boton_modificar{
     height: 40px;  
     font-family: var(--letra_tablas);
@@ -384,21 +310,8 @@ a{
 .boton_modificar a{
     color: var(--clarote);
 }
-/* .boton_ingresar{
-    background-color: var(--white);
-    padding: 3px 20px;
-    font-family: var(--letras); 
-    font-weight: 400;
-    font-size: 18px;
-    border: 2.5px solid var(--gris_cambio);
-    border-radius: var(--border);
-    margin-left: 55rem;
-    width: 120px;
-}
-.boton_ingresar a{
-    font-size: 15px;
-    color: var(--clarote);
-} */
+
+/*MEDIA QUERY 500*/
 @media (max-width: 500px) {
     .Pag__title h1 {
         font-size: 24px;
@@ -415,21 +328,53 @@ a{
         padding: 6px;
         font-size: 14px;
     }
-
-        .botones__top {
-            justify-content: space-between;
-        }
-    
-        .botones__top .boton__vehiculo__2 a,
-        .botones__top .boton__registro__vehiculo_2 a,
-        .botones__top .boton__rgistro__usuarios a {
-            font-size: 14px;
-            padding: 5px 10px;
-        }
-    
-        .boton__ingresar__nuevo button {
-            width: 90%;
-            font-size: 16px;
-            margin-top: 10px;
-        }
+    .boton__ingresar__nuevo button {
+        width: 90%;
+        font-size: 16px;
+        margin-top: 10px;
     }
+
+    .menu_hamburguesa {
+        display: block;
+    }
+
+    /* Ocultar los botones originales cuando el menú hamburguesa esté visible */
+    .botones__top {
+        display: none;
+    }
+    table{
+        width: 50px;
+    }
+}
+
+/*MEDIA QUERY 700*/
+@media (max-width: 700px) {
+    .Pag__container {
+        flex-direction: column;
+        width: 80vw;
+    }
+
+    .botones__container a {
+        width: 150px;
+        margin: 20px;
+        padding: 8px;
+    }
+    .boton__ingresar__nuevo button {
+        width: 90%;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .menu_hamburguesa {
+        display: block;
+    }
+
+    /* Ocultar los botones originales cuando el menú hamburguesa esté visible */
+    .botones__top {
+        display: none;
+    }
+    table{
+        width: 50px;
+    }
+
+}

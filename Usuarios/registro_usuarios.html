@@ -25,7 +25,27 @@
         </nav>
       </section>
     </header>
-    <section class="botones_top">
+
+    <section class="menu_hamburguesa">
+      <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+      </div>
+      <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <div class="boton_vehiculo_3">
+            <a href="../Vehiculos/vehiculos.html"><i class="fa-solid fa-car"></i> Vehiculos</a>
+        </div>
+        <div class="boton_registro_vehiculo">
+            <a href="../Registro/registro_entrada.html"><i class="fa-solid fa-square-parking"></i> Registro entradas de vehiculos</a>
+        </div>
+        <div class="boton_rgistro_usuarios_3">
+            <a href=""><i class="fa-regular fa-id-card"></i> Registro usuarios</a>
+        </div>
+    </div>  
+    </section>
+
+  
+    <section class="botones__top">
         <div class="boton_vehiculo_3">
           <a href="../Vehiculos/vehiculos.html"><i class="fa-solid fa-car"></i>Vehiculos</a>
         </div>
@@ -36,12 +56,9 @@
           <a href=""><i class="fa-regular fa-id-card"></i>Registro usuarios</a>
         </div>
     </section>
+
     <section class="boton__ingresar__nuevo">
       <a href="usuario_nuevo.html" class="bt_nuevo_usuario">Ingresar nuevo</a>
-    </section>
-        <div>
-        </div>
-      </div>
     </section>
     <section class="tabla__datos__vehiculo">
       <table class="tabla">
@@ -63,5 +80,6 @@
       </table>
   </section>
   <script type="module" src="../Js/listar_usuarios.js"></script>
+  <script src="../Js/hamburguesa.js"></script>
 </body>
 </html>
