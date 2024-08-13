@@ -51,21 +51,9 @@ formu.addEventListener("submit", (event) => {
         location.href ="/logeo.html";
         console.log(datos)
         // enviar(datos)
-        alert("bien")
+        alert("Formulario enviado")
     }
     else{
-        alert("mal")
+        alert("Por favor llene todos los campos del formulario")
     }
 })
-
-async function enviar(datos) {
-    fetch('http://127.0.0.1:3000/Vigilante', {
-        method: 'POST',
-        body: JSON.stringify(datos),
-        headers: {
-            'Content-type': 'application/json; charsert=UTF-8',
-        },
-    })
-    .then( (response) => response.json() )
-    .then((json) => console.log(json))
-  }

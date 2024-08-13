@@ -4,4 +4,5 @@ async function eliminarvehiculo(placa) {
         method: "DELETE"
     })
     obtener()
+    alert("Vehiculo eliminado exitosamente ")
 }

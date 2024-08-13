@@ -50,31 +50,14 @@ formulario.addEventListener("submit", (event) => {
         location.href ="/Registro/registro_entrada.html";
         console.log(datos)
         // enviar(datos)
-        alert("bien")
+        alert("Formulario Enviado")
     }
     else{
-        alert("mal")
+        alert("Por favor llene todos los campos antes de enviar el formulario")
     }
 })
 
 
-//fUNCION PARA ENVIAR DATOS 
-async function enviar(datos) {
-    fetch('http://127.0.0.1:3000/Registros', {
-        method: 'POST',
-        body: JSON.stringify(datos),
-        headers: {
-            'Content-type': 'application/json; charsert=UTF-8',
-        },
-    })
-    .then( (response) => response.json() )
-    .then((json) => {
-        codigo.value = "";
-        fecha2.value = "";
-        placa2.value = "";
-        fecha.value = "";
-    });
-}
 
 
 
