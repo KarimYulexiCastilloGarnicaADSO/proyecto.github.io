@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
     <header>
       <section class="logeo">
         <nav class="logeo__nav">
@@ -26,40 +27,43 @@
       </section>
     </header>
 
-    <section class="menu_hamburguesa">
-      <div class="hamburger" onclick="toggleMenu()">
-          <i class="fa-solid fa-bars"></i>
-      </div>
-      <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-        <div class="boton_vehiculo_3">
-            <a href="../Vehiculos/vehiculos.html"><i class="fa-solid fa-car"></i> Vehiculos</a>
-        </div>
-        <div class="boton_registro_vehiculo">
-            <a href="../Registro/registro_entrada.html"><i class="fa-solid fa-square-parking"></i> Registro entradas de vehiculos</a>
-        </div>
-        <div class="boton_rgistro_usuarios_3">
-            <a href=""><i class="fa-regular fa-id-card"></i> Registro usuarios</a>
-        </div>
-    </div>  
-    </section>
+    <main>
 
+      <section class="menu_hamburguesa">
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div id="sidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+          <div class="boton_vehiculo_3">
+              <a href="../Vehiculos/vehiculos.html"><i class="fa-solid fa-car"></i> Vehiculos</a>
+          </div>
+          <div class="boton_registro_vehiculo">
+              <a href="../Registro/registro_entrada.html"><i class="fa-solid fa-square-parking"></i> Registro entradas de vehiculos</a>
+          </div>
+          <div class="boton_rgistro_usuarios_3">
+              <a href=""><i class="fa-regular fa-id-card"></i> Registro usuarios</a>
+          </div>
+      </div>  
+      </section>
   
+        
     <section class="botones__top">
-        <div class="boton_vehiculo_3">
-          <a href="../Vehiculos/vehiculos.html"><i class="fa-solid fa-car"></i>Vehiculos</a>
-        </div>
-        <div class="boton_registro_vehiculo">
-          <a href="../Registro/registro_entrada.html"><i class="fa-solid fa-square-parking"></i>Registro entradas de vehiculos</a>
-        </div>
-        <div class="boton_rgistro_usuarios_3">
-          <a href=""><i class="fa-regular fa-id-card"></i>Registro usuarios</a>
-        </div>
+      <div class="boton_vehiculo_3">
+        <a href="../Vehiculos/vehiculos.html"><i class="fa-solid fa-car"></i>Vehiculos</a>
+      </div>
+      <div class="boton_registro_vehiculo">
+        <a href="../Registro/registro_entrada.html"><i class="fa-solid fa-square-parking"></i>Registro entradas de vehiculos</a>
+      </div>
+      <div class="boton_rgistro_usuarios_3">
+        <a href=""><i class="fa-regular fa-id-card"></i>Registro usuarios</a>
+      </div>
     </section>
 
     <section class="boton__ingresar__nuevo">
       <a href="usuario_nuevo.html" class="bt_nuevo_usuario">Ingresar nuevo</a>
     </section>
+
     <section class="tabla__datos__vehiculo">
       <table class="tabla">
           <thead>
@@ -74,12 +78,19 @@
                   <th>Acciones</th>
               </tr>
           </thead>
+
           <tbody class="tabla__cuerpo" id="bodyTable">
 
           </tbody>
+
       </table>
-  </section>
+
+    </section>
+
+  </main>
+    
   <script type="module" src="../Js/listar_usuarios.js"></script>
   <script src="../Js/hamburguesa.js"></script>
+  
 </body>
 </html>

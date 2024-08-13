@@ -7,48 +7,49 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+
     <header>
-        <section class="logeo">
-          <nav class="logeo__nav">
-            <div class="logeo__container">
-              <div class="logo__logeo">
-                <img src="../Imagenes/logo_Sena_negro.png" alt="">
-              </div>
-              <div class="title__logeo">
-                <h1>Registro de parqueadero de Instructores y Aprendices</h1>
-              </div>
-              <div class="boton__logeo">
-                <button><a href="registro_usuarios.html">Volver</a></button>
-              </div>
+      <section class="logeo">
+        <nav class="logeo__nav">
+          <div class="logeo__container">
+            <div class="logo__logeo">
+              <img src="../Imagenes/logo_Sena_negro.png" alt="">
             </div>
-          </nav>
-        </section>
-      </header>
-      <section class="ingreso">
-        <h1>MODIFICACIÓN</h1>
+            <div class="title__logeo">
+              <h1>Registro de parqueadero de Instructores y Aprendices</h1>
+            </div>
+            <div class="boton__logeo">
+              <button><a href="registro_usuarios.html">Volver</a></button>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </header>
+
+    <section class="ingreso">
+      <h1>MODIFICACIÓN</h1>
         <form action="" id="formulario" novalidate>
-            <input type="text" id="documento" placeholder="Ingrese el numero de documento" autocomplete="off" required>
-            <label for=""></label>
-            <input type="text" id="nombre" placeholder="Ingrese el nombre" autocomplete="off" required>
-            <label for=""></label>
-            <input type="text" id="apellido" placeholder="Ingrese el apellido" autocomplete="off" required>
-            <label for=""></label>
-            <input type="text" id="telefono" placeholder="Ingrese el numero de telefono" autocomplete="off" required>
-            <label for=""></label>
-            <select class="combo"  id="tp_usuario" required>
-                <option value="value1" disabled selected>Seleccionar</option>
-            </select>
-            <select class="combo" id="tp_jornada" required>
-                <option value="value1" disabled selected>Seleccionar</option>
-            </select>
-            <button href="registro_usuarios.html" class="boton" type="button">Modificar</button>
-            <!-- registro_usuarios.html -->
-        </form>
+          <input type="text" id="documento" placeholder="Ingrese el numero de documento" autocomplete="off" required>
+          <label for=""></label>
+          <input type="text" id="nombre" placeholder="Ingrese el nombre" autocomplete="off" required>
+          <label for=""></label>
+          <input type="text" id="apellido" placeholder="Ingrese el apellido" autocomplete="off" required>
+          <label for=""></label>
+          <input type="text" id="telefono" placeholder="Ingrese el numero de telefono" autocomplete="off" required>
+          <label for=""></label>
+          <select class="combo"  id="tp_usuario" required>
+              <option value="value1" disabled selected>Seleccionar</option>
+          </select>
+          <select class="combo" id="tp_jornada" required>
+              <option value="value1" disabled selected>Seleccionar</option>
+          </select>
+          <button href="registro_usuarios.html" class="boton" type="button">Modificar</button>
+      </form>
     </section>
+
     <script type="module" src="../Js/select_j.js"></script>
     <script type="module" src="../Js/select_u.js"></script>
     <script type="module" src="../Js/modificar_usuarios.js"></script>
-</body>
-</html>
-</body>
+
+ </body>
 </html>
