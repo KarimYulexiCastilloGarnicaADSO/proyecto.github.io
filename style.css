@@ -316,12 +316,10 @@ a{
     .Pag__title h1 {
         font-size: 24px;
     }
-
     .Pag__container {
         flex-direction: column;
         width: 90vw;
     }
-
     .botones__container a {
         width: 100px;
         margin: 15px;
@@ -333,17 +331,34 @@ a{
         font-size: 16px;
         margin-top: 10px;
     }
-
     .menu_hamburguesa {
         display: block;
     }
-
     /* Ocultar los botones originales cuando el menú hamburguesa esté visible */
     .botones__top {
         display: none;
     }
     table{
         width: 50px;
+    }
+    .logeo .logeo__nav .logeo__container .title__logeo h1{
+        font-size: 17px;
+    }
+    th, td {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .boton_eliminar {
+        width: 50px;
+        padding: 3px;
+        font-size: 10px;
+    }
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    table {
+        min-width: 700px; /* Asegura que la tabla tenga al menos este ancho */
     }
 }
 
@@ -353,7 +368,6 @@ a{
         flex-direction: column;
         width: 80vw;
     }
-
     .botones__container a {
         width: 150px;
         margin: 20px;
@@ -364,11 +378,9 @@ a{
         font-size: 16px;
         margin-top: 10px;
     }
-
     .menu_hamburguesa {
         display: block;
     }
-
     /* Ocultar los botones originales cuando el menú hamburguesa esté visible */
     .botones__top {
         display: none;
@@ -376,5 +388,25 @@ a{
     table{
         width: 50px;
     }
-
+    th, td {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+    .boton_eliminar {
+        width: 60px;
+        padding: 5px;
+        font-size: 12px;
+    }   
+    .boton_modificar_u {
+        width: 60px;
+        padding: 5px;
+        font-size: 12px;
+    }
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    table {
+        min-width: 700px; /* Asegura que la tabla tenga al menos este ancho */
+    }
 }

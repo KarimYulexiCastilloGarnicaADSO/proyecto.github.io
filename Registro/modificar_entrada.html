@@ -25,14 +25,20 @@
         </section>
     </header>
     <section class="ingreso">
-        <form action="" id="formulario">
-            <label for="" class="label_registros">Ingrese la fecha y hora de salida</label>
-            <input type="datetime-local" id="fch_entrada" placeholder="" autocomplete="off">
+        <h1>MODIFICACIÓN</h1>
+          <form action="" id="formulario" novalidate>
+            <input type="text" id="id_r" placeholder="Ingrese el id" autocomplete="off" required>
             <label for=""></label>
-            <input type="text" id="placa_entrada" placeholder="Ingrese el codigo de registro del vehiculo" autocomplete="off">
-            <a href="registro_entrada.html" class="boton" type="submit">Salida</a>
+            <input type="text" id="entrada" placeholder="Ingrese la entrada" autocomplete="off" required>
+            <label for=""></label>
+            <input type="text" id="placa" placeholder="Ingrese la placa" autocomplete="off" required>
+            <label for=""></label>
+            <input type="text" id="salida" placeholder="Ingrese la salida" autocomplete="off" required>
+            <label for=""></label>
+            <button href="registro_entrada.html" class="boton" type="button">Modificar</button>
         </form>
-    </section>
+      </section>
     <!-- <script type="module" src="../Js/registros.js"></script> -->
+     <script src="../Js/modificar_registro_entrada.js"></script>
 </body>
 </html>
