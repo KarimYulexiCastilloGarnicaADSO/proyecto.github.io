@@ -29,6 +29,7 @@ async function obtener() {
         let td3 = document.createElement("td");
         let td4 = document.createElement("td");
         let td5 = document.createElement("td");
+        let td6 = document.createElement("td");
 
         td.classList.add("idUsuario");
 
@@ -51,16 +52,18 @@ async function obtener() {
         form.appendChild(btnDelete);
 
         td.textContent = elemento.id;
-        td2.textContent = elemento.entrada;
-        td3.textContent = elemento.placa;
-        td4.textContent = elemento.salida;
-        td5.appendChild(form)
+        td2.textContent = elemento.codigo;
+        td3.textContent = elemento.entrada;
+        td4.textContent = elemento.placa;
+        td5.textContent = elemento.salida;
+        td6.appendChild(form)
 
         tr.appendChild(td);
         tr.appendChild(td2);
         tr.appendChild(td3);
         tr.appendChild(td4);
         tr.appendChild(td5);
+        tr.appendChild(td6);
 
         btnModify.addEventListener("click", (event)=>{
             event.preventDefault();
