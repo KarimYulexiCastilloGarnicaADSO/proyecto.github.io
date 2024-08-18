@@ -34,30 +34,54 @@ codigo.addEventListener("blur", (event) => {
     Contraseña(event, codigo)
 })
 
-formulario.addEventListener("submit", (event) => {
+// Función para verificar si la placa tiene un dueño
+async function verificarDueno(placa) {
+    try {
+        const response = await fetch(`http://127.0.0.1:3000/vehiculos/dueno/${placa}`, {
+            method: "GET",
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        });
+
+        if (response.ok) {
+            const json = await response.json();
+            return json.dueno;  // Devuelve el nombre del dueño si existe
+        } else {
+            return null;  // Si la placa no tiene dueño
+        }
+    } catch (error) {
+        console.error("Error al verificar el dueño: ", error);
+        return null;
+    }
+}
+
+// Modifica el listener de submit para incluir la verificación del dueño
+formulario.addEventListener("submit", async (event) => {
     event.preventDefault();
-    let validar = valid(event, '#formulario [required]')
-    // alert(validar)
-    if (validar) {
+
+    const validar = valid(event, '#formulario [required]');
+    if (!validar) {
+        alert("Por favor llene todos los campos antes de enviar el formulario");
+        return;
+    }
+
+    const placa = placa2.value;
+    const dueno = await verificarDueno(placa);
+
+    if (!dueno) {
+        alert("La placa ingresada no tiene un dueño registrado. Por favor registre un dueño primero.");
+        location.href = "/Usuarios/usuario_nuevo.html";  // Redirigir al formulario de registro de usuario
+    } else {
         const datos = {
             codigo: codigo.value,
             entrada: fecha2.value,
             placa: placa2.value,
             salida: fecha.value
-        }
-        enviar(datos)
-        // location
-        location.href ="/Registro/registro_entrada.html";
-        console.log(datos)
-        // enviar(datos)
-        alert("Formulario Enviado")
+        };
+
+        enviar(datos);
+        location.href = "/Registro/registro_entrada.html";
+        alert("Formulario Enviado");
     }
-    else{
-        alert("Por favor llene todos los campos antes de enviar el formulario")
-    }
-})
-
-
-
-
-
+});
