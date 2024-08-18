@@ -18,7 +18,8 @@ async function modificarusuario(id) {
         apellido.value = json.apellido,
         telefono.value = json.telefono,
         tp_usuario.value = json.tp_usuario,
-        tp_jornada.value = json.tp_jornada
+        tp_jornada.value = json.tp_jornada,
+        placa.value = json.placa
     });
     // obtener();
 }
@@ -33,7 +34,8 @@ function Mudicar() {
         apellido: apellido.value,
         telefono: telefono.value,
         tp_usuario: tp_usuario.value,
-        tp_jornada: tp_jornada.value
+        tp_jornada: tp_jornada.value,
+        placa: placa
     }
 
     fetch(`http://127.0.0.1:3000/Registro_usuarios_vehiculos/${id}`, {

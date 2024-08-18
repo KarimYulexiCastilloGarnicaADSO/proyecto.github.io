@@ -14,5 +14,6 @@ async function enviar(datos) {
         telefono.value = "";
         tp_usuario.value = "";
         tp_jornada.value = "";
+        placa.value = "";
     });
 }

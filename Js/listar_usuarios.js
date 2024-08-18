@@ -33,6 +33,7 @@ async function obtener() {
         let td6 = document.createElement("td");
         let td7 = document.createElement("td");
         let td8 = document.createElement("td");
+        let td9 = document.createElement("td");
 
         td.classList.add("idUsuario");
 
@@ -42,9 +43,6 @@ async function obtener() {
         btnModify.textContent = "Modificar";
         btnModify.setAttribute("data-id", elemento.id);
         btnModify.setAttribute("id", "btnModificar");
-        
-
-
 
         // Botón de eliminar
         let btnDelete = document.createElement("button");
@@ -64,7 +62,8 @@ async function obtener() {
         td5.textContent = elemento.telefono;
         td6.textContent = elemento.tp_usuario;
         td7.textContent = elemento.tp_jornada;
-        td8.appendChild(form);
+        td8.textContent = elemento.placa;
+        td9.appendChild(form);
 
         tr.appendChild(td);
         tr.appendChild(td2);
@@ -74,6 +73,7 @@ async function obtener() {
         tr.appendChild(td6);
         tr.appendChild(td7);
         tr.appendChild(td8);
+        tr.appendChild(td9);
 
         btnModify.addEventListener("click", (event)=>{
             event.preventDefault();

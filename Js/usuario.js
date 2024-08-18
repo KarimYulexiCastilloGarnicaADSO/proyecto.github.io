@@ -1,6 +1,7 @@
 import Modelo2 from "./numeros10.js"
 import Marca from "./letras.js"
 import valid from "./validar.js"
+import Placa from "./placa.js"
 
 const form = document.querySelector('#formulario')
 const documento = document.querySelector('#documento')
@@ -9,7 +10,8 @@ const apellido = document.querySelector('#apellido')
 const telefono = document.querySelector('#telefono')
 const tp_usuario = document.querySelector('#tp_usuario')
 const tp_jornada = document.querySelector('#tp_jornada')
-console.log(tp_jornada);
+const placa = document.querySelector('#placa')
+console.log(placa);
 
 documento.addEventListener("keypress", (event) => {
     Modelo2(event, documento)
@@ -35,6 +37,12 @@ telefono.addEventListener("keypress", (event) => {
 telefono.addEventListener("blur", (event) => {
     Modelo2(event, telefono)
 })
+placa.addEventListener("keypress", (event) => {
+    Placa(event, placa)
+})
+placa.addEventListener("blur", (event) => {
+    Placa(event, placa)
+})
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -47,7 +55,8 @@ form.addEventListener("submit", (event) => {
             apellido: apellido.value,
             telefono: telefono.value,
             tp_usuario: tp_usuario.value,
-            tp_jornada: tp_jornada.value
+            tp_jornada: tp_jornada.value,
+            placa: placa.value
         }
         enviar(datos)
         // location
