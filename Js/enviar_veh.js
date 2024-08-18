@@ -12,8 +12,10 @@ async function enviar(datos) {
     .then((json) => {
         placa.value = "";
         marca.value = "";
-        select.value = "";
         modelo.value = "";
-        color.value = "";   
+        color.value = "";  
+        $tipo.value = "";
+        dueno.value = ""; 
     });
 }
+enviar(datos)

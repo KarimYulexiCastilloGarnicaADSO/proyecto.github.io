@@ -2,26 +2,11 @@ import Marca from "./letras.js";
 import Modelo from "./numeros4.js";
 import Placa from "./placa.js";
 import valid from "./validar.js";
-/**
- * Carga los tipos de vehiculo
- */
-async function consultar() {
-    const data = await fetch("http://127.0.0.1:3000/tipos_vehiculo")
-    const tpos = await data.json()
-
-    tpos.forEach(element => {
-        let option = document.createElement('option')
-        select.appendChild(option)
-        option.innerText = element.nombre
-    });
-}
-consultar()
 
 /**
  * Buscamos por id en el HTML
  */
 const $form = document.querySelector('#formulario')
-console.log($form)
 const select = document.querySelector('#formulario > select')
 console.log(select)
 const placa = document.querySelector('#placa')
@@ -29,6 +14,8 @@ const marca = document.querySelector('#marca')
 const $tipo = document.querySelector('#tipo')
 const modelo =document.querySelector('#modelo')
 const color = document.querySelector('#color')
+const due = document.querySelector('#dueno')
+console.log(due)
 const formu_usu = document.querySelector('.form__subtitulos')
 
 /**
@@ -59,6 +46,12 @@ modelo.addEventListener("keypress", (event) => {
 modelo.addEventListener("blur", (event) => {
     Modelo(event, modelo)
 }) 
+due.addEventListener("keypress", (event) => {
+    Marca(event, due)
+})
+due.addEventListener("blur", (event) => {
+    Marca(event, due)
+})
 
 
 $form.addEventListener("submit", (event) => {
@@ -71,7 +64,8 @@ $form.addEventListener("submit", (event) => {
             marca: marca.value,
             modelo: modelo.value,
             color: color.value,
-            $tipo: $tipo.value
+            tipo: $tipo.value,
+            due: due.value
         }
         enviar(datos)
         // location

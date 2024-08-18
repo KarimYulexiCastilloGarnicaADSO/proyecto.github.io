@@ -75,6 +75,7 @@ async function obtener() {
 
     bodyTable.appendChild(fragmento);
 
+    //Accion eliminar vehiculo
     let buttons = document.querySelectorAll("[codigo='btnEliminar']");
     buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
