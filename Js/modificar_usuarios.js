@@ -35,7 +35,7 @@ function Mudicar() {
         telefono: telefono.value,
         tp_usuario: tp_usuario.value,
         tp_jornada: tp_jornada.value,
-        placa: placa
+        placa: placa.value
     }
 
     fetch(`http://127.0.0.1:3000/Registro_usuarios_vehiculos/${id}`, {

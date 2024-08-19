@@ -34,7 +34,7 @@ formu_usu.addEventListener("submit", (event) => {
       }
       enviar(datos)
       // location
-      location.href ="/Vehiculos/vehiculos.html";
+      location.href ="/Usuarios/registro_usuarios.html";
       console.log(datos)
       // enviar(datos)
       alert("Bienvenido")

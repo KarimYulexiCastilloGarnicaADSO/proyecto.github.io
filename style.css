@@ -86,12 +86,12 @@ th{
     font-family: var(--letras);
 }
 td{
-    padding: 20px 20px ;
+    padding: 10px 10px ;
     border: 1px solid var(--claro);
     font-family: var(--letras);
 }
 .boton_eliminar{
-    margin: 30px;
+    margin: 20px;
     padding: 10px;
     width: 100px;
     background-color: red;
@@ -115,12 +115,12 @@ td{
     cursor: pointer;
     color: white;
     font-family: var(--letras);
-    margin: 30px;
+    margin: 20px;
     padding: 10px;
     width: 100px;
 }
 .boton_modificar_u{
-    margin: 30px;
+    margin: 20px;
     padding: 10px;
     width: 100px;
     background-color: var(--claro);
@@ -314,9 +314,10 @@ a{
 /*MEDIA QUERY 500*/
 @media (max-width: 500px) {
     .Pag__title h1 {
-        font-size: 24px;
+        margin: 20px;
+        font-size: 20px;
     }
-    .Pag__container {
+    .Pag_inicio .Pag__container {
         flex-direction: column;
         width: 90vw;
     }
