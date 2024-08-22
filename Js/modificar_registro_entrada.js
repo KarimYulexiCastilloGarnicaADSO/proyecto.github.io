@@ -33,8 +33,17 @@ async function modificarRegistro(id) {
 modificarRegistro(id);
 
 function modificar() {
-    // Verifica que todos los elementos existen y tienen valores antes de continuar
     if (entrada && placa && salida && codigo) {
+        //obtenemos los valores de las fechas
+        const entradaDate = new Date(entrada.value);
+        const salidaDate = new Date(salida.value);
+
+        //verificamos que la fecha de salida no sea menor que la fecha de entrada
+        if (salidaDate < entradaDate) {
+            alert("La fecha de salida no puede ser anterior a la fecha de entrada.");
+            return; //se detiene la ejecución de la función si la fecha de salida es menor
+        }
+
         const datos = {
             codigo: codigo.value,
             entrada: entrada.value,
